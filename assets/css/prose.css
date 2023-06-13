@@ -182,6 +182,10 @@
   font-size: 1.125em;
 }
 
+.prose :where(h1):not(:where(.not-prose, .not-prose *)) {
+  margin-bottom: 0;
+}
+
 .prose :where(.prose + .linktree-section):not(:where(.not-prose, .not-prose *)),
 .prose
   :where(

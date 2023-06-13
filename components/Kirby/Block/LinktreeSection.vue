@@ -28,8 +28,8 @@ const socialIcons: Record<string, string> = {
 
 <template>
   <div
-    class="linktree-section mt-$margin space-y-4"
-    style="--margin: calc(2 * var(--un-prose-space-y))"
+    class="linktree-section mt-$gap space-y-$gap"
+    style="--gap: calc(2 * var(--un-prose-space-y))"
   >
     <div v-for="(item, index) in block.content.links" :key="index">
       <ElementButton is="a" :href="item.link" class="relative w-full">
@@ -39,7 +39,6 @@ const socialIcons: Record<string, string> = {
           "
           class="absolute left-3 h-[1.75em] w-[1.75em]"
           :class="[
-              ,
               Object.entries(socialIcons).find(([icon]) => item.link.includes(icon))![1],
             ]"
         />
