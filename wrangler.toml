@@ -1,0 +1,7 @@
+name = "linktree"
+main = "./.output/server/index.mjs"
+workers_dev = true
+compatibility_date = "2023-06-13"
+
+[site]
+bucket = ".output/public"
