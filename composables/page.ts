@@ -39,12 +39,15 @@ export function setPage<T extends Record<string, any>>(page?: T) {
       { property: 'og:description', content: description },
       { property: 'og:url', content: url },
       { property: 'og:type', content: 'website' },
-      { property: 'og:image', content: image },
+      ...(image ? [{ property: 'og:image', content: image }] : []),
       { name: 'twitter:title', content: title },
       { name: 'twitter:description', content: description },
       { name: 'twitter:url', content: url },
-      { name: 'twitter:card', content: 'summary_large_image' },
-      { name: 'twitter:image', content: image },
+      {
+        name: 'twitter:card',
+        content: image ? 'summary_large_image' : 'summary',
+      },
+      ...(image ? [{ name: 'twitter:image', content: image }] : []),
     ],
     link: [{ rel: 'canonical', href: url }],
   })
