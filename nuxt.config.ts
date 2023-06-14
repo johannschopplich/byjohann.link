@@ -6,25 +6,9 @@ if (shouldPrerender) consola.info('Nitro page prerendering enabled')
 export default defineNuxtConfig({
   modules: ['@unocss/nuxt', '@unlazy/nuxt', '@vueuse/nuxt', 'nuxt-kql'],
 
-  $production: {
-    runtimeConfig: {
-      public: {
-        deploymentEnvironment: 'prod',
-      },
-    },
-  },
-
-  $development: {
-    runtimeConfig: {
-      public: {
-        deploymentEnvironment: 'dev',
-      },
-    },
-  },
-
   runtimeConfig: {
     public: {
-      siteUrl: process.env.NUXT_PUBLIC_SITE_URL,
+      siteUrl: 'https://byjohann.link',
     },
   },
 
