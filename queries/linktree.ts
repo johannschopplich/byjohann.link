@@ -20,13 +20,6 @@ export interface KirbyLinktreeData {
   cover?: {
     url: string
   }
-  images: {
-    uuid: string
-    srcset: string
-    width: number
-    height: number
-    alt: string
-  }[]
 }
 
 export type KirbyLinktreeResponse = KirbyQueryResponse<KirbyLinktreeData>
@@ -46,12 +39,6 @@ export const linktreeQuery: KirbyQuerySchema = {
     cover: {
       query: 'page.cover.toFile?.resize(1200)',
       select: ['url'],
-    },
-    // Retrieve all images from the page to resolve a UUID from
-    // e.g. a structure field to a file object
-    images: {
-      query: 'page.files.template("image")',
-      select: ['uuid', 'srcset', 'width', 'height', 'alt'],
     },
   },
 }

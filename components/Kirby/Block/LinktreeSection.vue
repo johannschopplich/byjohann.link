@@ -26,7 +26,7 @@ const linksWithIcons = props.block.content.links.map((item) => {
 
   return {
     ...item,
-    icon: hostname ? socialIcons[hostname] : undefined,
+    ...(hostname && { icon: socialIcons[hostname] }),
   }
 })
 </script>
@@ -37,12 +37,13 @@ const linksWithIcons = props.block.content.links.map((item) => {
     style="--gap: calc(2 * var(--un-prose-space-y))"
   >
     <div v-for="(item, index) in linksWithIcons" :key="index">
-      <ElementButton is="a" :href="item.link" class="relative w-full">
+      <ElementButton :href="item.link" class="relative w-full">
         <span
           v-if="item.icon"
-          class="absolute left-3 h-[1.75em] w-[1.75em]"
-          :class="[item.icon]"
-        />
+          class="absolute inset-y-0 left-3 flex items-center"
+        >
+          <span :class="['h-[1.75em] w-[1.75em]', item.icon]" />
+        </span>
         <span>
           {{ item.title }}
         </span>
