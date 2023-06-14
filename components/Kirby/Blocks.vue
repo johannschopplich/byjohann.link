@@ -82,7 +82,7 @@ function handleAnchors(
 <template>
   <div
     ref="content"
-    class="prose text-center font-sans"
+    class="prose text-center"
     style="--un-prose-space-y: 0.5rem"
   >
     <template v-for="(block, index) in blocks" :key="index">
