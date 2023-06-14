@@ -178,12 +178,20 @@
 /*
  * Custom styles
  */
-.prose :where(h1, h2, h3, h4, h5, h6):not(:where(.not-prose, .not-prose *)) {
+.prose :where(h1):not(:where(.not-prose, .not-prose *)) {
+  margin-bottom: 0;
   font-size: 1.125em;
 }
 
-.prose :where(h1):not(:where(.not-prose, .not-prose *)) {
-  margin-bottom: 0;
+.prose :where(h2, h3, h4, h5, h6):not(:where(.not-prose, .not-prose *)) {
+  font-size: 1em;
+}
+
+.prose :where(a:hover):not(:where(.not-prose, .not-prose *)) {
+  /* --at-apply: 'decoration-primary-500'; */
+  text-decoration-line: underline;
+  text-decoration-thickness: var(--un-decoration-thickness);
+  text-underline-offset: var(--un-decoration-offset);
 }
 
 .prose :where(.prose + .linktree-section):not(:where(.not-prose, .not-prose *)),

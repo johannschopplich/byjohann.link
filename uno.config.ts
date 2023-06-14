@@ -26,6 +26,17 @@ export default defineConfig<Theme>({
       },
     },
   },
+  rules: [
+    [
+      'text-underline',
+      {
+        'text-decoration-line': 'underline',
+        'text-decoration-color': 'currentColor',
+        'text-decoration-thickness': 'var(--un-decoration-thickness)',
+        'text-underline-offset': 'var(--un-decoration-offset)',
+      },
+    ],
+  ],
   transformers: [transformerDirectives()],
   presets: [presetForms(), presetWind(), presetIcons()],
 })
