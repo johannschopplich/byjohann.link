@@ -16,9 +16,9 @@ const page = usePage<KirbyLinktreeData>()
       class="mx-[-50vw] h-[80rem] w-[160rem] translate-y-[-90%]"
       style="background: radial-gradient(50% 50%, #ff9320 0%, transparent 100%)"
     />
-    <div class="noisey absolute inset-0 opacity-40" />
+    <div class="noisey absolute inset-0 bg-repeat opacity-40" />
     <div
-      class="from-ivory to-ivory/0 absolute bottom-0 left-0 h-[40%] w-full transform-gpu bg-gradient-to-t"
+      class="from-ivory to-ivory/0 absolute inset-x-0 bottom-0 h-[40%] transform-gpu bg-gradient-to-t"
     />
   </div>
 
