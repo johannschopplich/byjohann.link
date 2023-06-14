@@ -16,6 +16,7 @@ const page = usePage<KirbyLinktreeData>()
       auto-sizes
       :width="page.profileImage.width"
       :height="page.profileImage.height"
+      :alt="page.profileImage.alt"
       class="mx-auto w-28 rounded-full"
     />
   </header>
