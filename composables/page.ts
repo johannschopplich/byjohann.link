@@ -46,6 +46,7 @@ export function setPage<T extends Record<string, any>>(page?: T) {
       { name: 'twitter:card', content: 'summary_large_image' },
       { name: 'twitter:image', content: image },
     ],
+    link: [{ rel: 'canonical', href: url }],
   })
 
   pageState.value = 'resolved'

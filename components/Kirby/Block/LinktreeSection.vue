@@ -1,8 +1,7 @@
 <script setup lang="ts">
 import type { KirbyBlock } from '#nuxt-kql'
-import type { KirbyLinktreeData } from '~/queries'
 
-defineProps<{
+const props = defineProps<{
   block: KirbyBlock<
     'linktree-section',
     {
@@ -14,16 +13,22 @@ defineProps<{
   >
 }>()
 
-const page = usePage<KirbyLinktreeData>()
-
-// Use static data to avoid reactivity when redirecting to another page
-const images = page.value.images
-
 const socialIcons: Record<string, string> = {
   'youtube.com': 'i-carbon:logo-youtube',
   'instagram.com': 'i-carbon:logo-instagram',
   'twitter.com': 'i-carbon:logo-twitter',
 }
+
+const linksWithIcons = props.block.content.links.map((item) => {
+  const hostname = Object.keys(socialIcons).find((icon) =>
+    item.link.includes(icon)
+  )
+
+  return {
+    ...item,
+    icon: hostname ? socialIcons[hostname] : undefined,
+  }
+})
 </script>
 
 <template>
@@ -31,16 +36,12 @@ const socialIcons: Record<string, string> = {
     class="linktree-section mt-$gap space-y-$gap"
     style="--gap: calc(2 * var(--un-prose-space-y))"
   >
-    <div v-for="(item, index) in block.content.links" :key="index">
+    <div v-for="(item, index) in linksWithIcons" :key="index">
       <ElementButton is="a" :href="item.link" class="relative w-full">
         <span
-          v-if="
-            Object.keys(socialIcons).some((icon) => item.link.includes(icon))
-          "
+          v-if="item.icon"
           class="absolute left-3 h-[1.75em] w-[1.75em]"
-          :class="[
-              Object.entries(socialIcons).find(([icon]) => item.link.includes(icon))![1],
-            ]"
+          :class="[item.icon]"
         />
         <span>
           {{ item.title }}

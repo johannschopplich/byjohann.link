@@ -12,7 +12,10 @@ export interface KirbyLinktreeData {
   blocks: KirbyBlock[]
   profileImage: {
     srcset: string
+    width: number
+    height: number
     alt: string
+    thumbhash: string
   }
   cover?: {
     url: string
@@ -38,7 +41,7 @@ export const linktreeQuery: KirbyQuerySchema = {
     blocks: 'page.text.toResolvedBlocks',
     profileImage: {
       query: 'page.files.find("profile-image.jpg")',
-      select: ['srcset', 'alt'],
+      select: ['srcset', 'width', 'height', 'alt', 'thumbhash'],
     },
     cover: {
       query: 'page.cover.toFile?.resize(1200)',

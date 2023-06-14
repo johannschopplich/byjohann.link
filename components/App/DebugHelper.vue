@@ -12,6 +12,8 @@ defineProps<{
     <summary class="cursor-pointer">
       {{ data ? 'Page data' : 'Error fetching page data' }}
     </summary>
-    <pre class="text-[0.875em]">{{ JSON.stringify(data, undefined, 2) }}</pre>
+    <pre class="whitespace-pre-wrap text-[0.875em]">{{
+      JSON.stringify(data, undefined, 2)
+    }}</pre>
   </details>
 </template>

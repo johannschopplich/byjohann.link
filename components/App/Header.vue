@@ -10,9 +10,12 @@ const page = usePage<KirbyLinktreeData>()
 
 <template>
   <header class="mb-8 mt-16">
-    <img
-      :srcset="page.profileImage.srcset"
-      :alt="page.profileImage.alt"
+    <UnLazyImage
+      :thumbhash="page.profileImage.thumbhash"
+      :src-set="page.profileImage.srcset"
+      auto-sizes
+      :width="page.profileImage.width"
+      :height="page.profileImage.height"
       class="mx-auto w-28 rounded-full"
     />
   </header>
