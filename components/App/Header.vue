@@ -18,7 +18,7 @@ const page = usePage<KirbyLinktreeData>()
     />
     <div class="noisey absolute inset-0 bg-repeat opacity-40" />
     <div
-      class="from-ivory to-ivory/0 absolute inset-x-0 bottom-0 h-[40%] transform-gpu bg-gradient-to-t"
+      class="absolute inset-x-0 bottom-0 h-[40%] transform-gpu from-ivory to-ivory/0 bg-gradient-to-t"
     />
   </div>
 
@@ -30,7 +30,7 @@ const page = usePage<KirbyLinktreeData>()
       :width="page.profileImage.width"
       :height="page.profileImage.height"
       :alt="page.profileImage.alt"
-      class="mx-auto w-28 rounded-full shadow-sm"
+      class="mx-auto w-28 rounded-full ring-1 ring-offset-2 ring-secondary-200 ring-offset-ivory"
     />
   </header>
 </template>
