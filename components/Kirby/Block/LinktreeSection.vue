@@ -17,6 +17,7 @@ const socialIcons: Record<string, string> = {
   'youtube.com': 'i-carbon:logo-youtube',
   'instagram.com': 'i-carbon:logo-instagram',
   'twitter.com': 'i-carbon:logo-twitter',
+  'github.com': 'i-carbon:logo-github',
 }
 
 const linksWithIcons = props.block.content.links.map((item) => {
