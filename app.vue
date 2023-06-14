@@ -4,7 +4,7 @@ import '~/assets/css/prose.css'
 </script>
 
 <template>
-  <Html lang="de" class="bg-[#f3f2ea]">
+  <Html lang="de" class="bg-ivory">
     <Head>
       <Link
         rel="icon"

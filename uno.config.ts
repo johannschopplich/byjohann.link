@@ -24,6 +24,7 @@ export default defineConfig<Theme>({
         900: '#171914',
         950: '#080907',
       },
+      ivory: '#fdf7ea',
     },
   },
   rules: [
