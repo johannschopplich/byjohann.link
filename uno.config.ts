@@ -13,7 +13,6 @@ export default defineConfig<Theme>({
       // Other combinations:
       // Primary: #4d558c
       // Secondary: #fa8b50
-      // Background: #fefaf7
       primary: {
         DEFAULT: '#89937A',
         50: '#E3E5DF',
@@ -42,7 +41,7 @@ export default defineConfig<Theme>({
         900: '#3F2000',
         950: '#231200',
       },
-      ivory: '#fdf7ea',
+      ivory: '#fefaf7',
     },
   },
   rules: [
