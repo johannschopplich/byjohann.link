@@ -10,6 +10,10 @@ import type { Theme } from '@unocss/preset-wind'
 export default defineConfig<Theme>({
   theme: {
     colors: {
+      // Other combinations:
+      // Primary: #4d558c
+      // Secondary: #fa8b50
+      // Background: #fefaf7
       primary: {
         DEFAULT: '#89937A',
         50: '#E3E5DF',
