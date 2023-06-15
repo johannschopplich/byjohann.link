@@ -45,7 +45,7 @@ export default defineConfig<Theme>({
       ivory: '#fefaf7',
     },
     fontFamily: {
-      tagada: `"Tagada",${theme.fontFamily!.sans}`,
+      heading: `"Cooper Hewitt",${theme.fontFamily!.sans}`,
     },
   },
   rules: [
