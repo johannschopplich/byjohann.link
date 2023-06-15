@@ -14,6 +14,10 @@ useHead({
       rel: 'icon',
       href: `data:image/svg+xml,${favicon.replace('"', '%22')}`,
     },
+    // {
+    //   rel: 'stylesheet',
+    //   href: '/fonts/Tagada.css',
+    // },
   ],
 })
 </script>

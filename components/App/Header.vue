@@ -30,7 +30,7 @@ const page = usePage<KirbyLinktreeData>()
       :width="page.profileImage.width"
       :height="page.profileImage.height"
       :alt="page.profileImage.alt"
-      class="mx-auto w-28 rounded-full ring-1 ring-offset-2 ring-secondary-200 ring-offset-ivory"
+      class="mx-auto w-28 rounded-full ring-1 ring-offset-2 ring-primary-100 ring-offset-ivory"
     />
   </header>
 </template>

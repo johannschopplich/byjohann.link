@@ -4,6 +4,7 @@ import {
   presetWind,
   transformerDirectives,
 } from 'unocss'
+import { theme } from '@unocss/preset-wind'
 import { presetForms } from '@julr/unocss-preset-forms'
 import type { Theme } from '@unocss/preset-wind'
 
@@ -42,6 +43,9 @@ export default defineConfig<Theme>({
         950: '#231200',
       },
       ivory: '#fefaf7',
+    },
+    fontFamily: {
+      tagada: `"Tagada",${theme.fontFamily!.sans}`,
     },
   },
   rules: [
