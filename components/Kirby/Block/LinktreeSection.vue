@@ -14,10 +14,11 @@ const props = defineProps<{
 }>()
 
 const socialIcons: Record<string, string> = {
-  'youtube.com': 'i-carbon:logo-youtube',
   'instagram.com': 'i-carbon:logo-instagram',
-  'twitter.com': 'i-carbon:logo-twitter',
+  'linkedin.com': 'i-carbon:logo-linkedin',
   'github.com': 'i-carbon:logo-github',
+  'twitter.com': 'i-carbon:logo-twitter',
+  'youtube.com': 'i-carbon:logo-youtube',
 }
 
 const linksWithIcons = props.block.content.links.map((item) => {
