@@ -1,6 +1,7 @@
 import {
   defineConfig,
   presetIcons,
+  presetWebFonts,
   presetWind,
   transformerDirectives,
 } from 'unocss'
@@ -45,7 +46,7 @@ export default defineConfig<Theme>({
       ivory: '#fefaf7',
     },
     fontFamily: {
-      heading: `"Cooper Hewitt",${theme.fontFamily!.sans}`,
+      heading: `"Clash Display",${theme.fontFamily!.sans}`,
     },
   },
   rules: [
@@ -59,6 +60,16 @@ export default defineConfig<Theme>({
       },
     ],
   ],
+  presets: [
+    presetForms(),
+    presetWind(),
+    presetIcons(),
+    presetWebFonts({
+      provider: 'fontshare',
+      fonts: {
+        clash: 'Clash Display',
+      },
+    }),
+  ],
   transformers: [transformerDirectives()],
-  presets: [presetForms(), presetWind(), presetIcons()],
 })
