@@ -19,7 +19,7 @@ const socialIcons: Record<string, string> = {
   'github.com': 'i-carbon:logo-github',
   'twitter.com': 'i-carbon:logo-twitter',
   'youtube.com': 'i-carbon:logo-youtube',
-  'johannschopplich.com': 'i-carbon:email',
+  'mail@johannschopplich.com': 'i-carbon:email',
 }
 
 const linksWithIcons = props.block.content.links.map((item) => {
