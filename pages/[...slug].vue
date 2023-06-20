@@ -1,7 +1,10 @@
 <script setup lang="ts">
 import { linktreeQuery } from '~/queries'
 
-const { data, error } = await useKql(linktreeQuery)
+const { languageCode } = getLocalePreference()
+const { data, error } = await useKql(linktreeQuery, {
+  language: languageCode === 'de' ? 'de' : 'en',
+})
 
 if (!data.value?.result) {
   setResponseStatus(useRequestEvent(), 404)
