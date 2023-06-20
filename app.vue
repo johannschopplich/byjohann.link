@@ -21,7 +21,7 @@ useHead({
 <template>
   <AppHeader />
 
-  <main id="main" class="mx-auto mb-8 w-[min(100%-2rem,640px)]">
+  <main id="main" class="mx-auto mb-16 w-[min(100%-2rem,640px)]">
     <NuxtPage />
   </main>
 </template>
