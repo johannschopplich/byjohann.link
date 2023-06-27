@@ -8,15 +8,19 @@ import {
   LazyKirbyBlockQuote,
   LazyKirbyBlockText,
 } from '#components'
-import type { KirbyBlock } from '#nuxt-kql'
+import type { ComponentPublicInstance } from 'vue'
+import type { KirbyBlock } from 'kirby-fest'
 
 defineProps<{
   blocks: KirbyBlock<string>[]
 }>()
 
-type Component = abstract new (...args: any) => any
+type ComponentConstructor<
+  T extends ComponentPublicInstance<Props> = ComponentPublicInstance<any>,
+  Props = any
+> = new (...args: any[]) => T
 
-const blockComponents: Partial<Record<string, Component>> = {
+const blockComponents: Record<string, ComponentConstructor> = {
   heading: LazyKirbyBlockHeading,
   image: LazyKirbyBlockImage,
   line: LazyKirbyBlockLine,
@@ -86,7 +90,7 @@ function handleAnchors(
     style="--un-prose-space-y: 0.5rem"
   >
     <template v-for="(block, index) in blocks" :key="index">
-      <component :is="(blockComponents[block.type] as any)" :block="block" />
+      <component :is="blockComponents[block.type]" :block="block" />
     </template>
   </div>
 </template>
