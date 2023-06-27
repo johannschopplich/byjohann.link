@@ -33,6 +33,7 @@ export default defineNuxtConfig({
 
   experimental: {
     payloadExtraction: shouldPrerender,
+    inlineSSRStyles: false,
   },
 
   typescript: {
