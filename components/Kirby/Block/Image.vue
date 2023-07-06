@@ -34,7 +34,7 @@ const figure = ref<HTMLElement | undefined>()
 const { width } = useElementSize(figure)
 
 const image = computed<Partial<ResolvedKirbyImage>>(
-  () => props.block.content.resolved.image?.[0] ?? {}
+  () => props.block.content.resolved.image?.[0] ?? {},
 )
 </script>
 

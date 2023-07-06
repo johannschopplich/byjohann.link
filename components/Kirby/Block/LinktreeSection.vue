@@ -24,7 +24,7 @@ const socialIcons: Record<string, string> = {
 
 const linksWithIcons = props.block.content.links.map((item) => {
   const hostname = Object.keys(socialIcons).find((icon) =>
-    item.link.includes(icon)
+    item.link.includes(icon),
   )
 
   return {
