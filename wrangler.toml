@@ -1,6 +1,7 @@
 name = "linktree"
 main = "./.output/server/index.mjs"
-workers_dev = true
+# Disable `*.workers.dev` subdomain
+workers_dev = false
 compatibility_date = "2023-06-13"
 
 [site]
