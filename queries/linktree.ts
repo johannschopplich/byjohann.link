@@ -2,7 +2,7 @@ import type {
   KirbyBlock,
   KirbyQueryResponse,
   KirbyQuerySchema,
-} from 'kirby-fest'
+} from 'kirby-types'
 
 export interface KirbyLinktreeData {
   id: string

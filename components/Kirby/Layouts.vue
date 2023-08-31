@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { KirbyLayout } from 'kirby-fest'
+import type { KirbyLayout } from 'kirby-types'
 
 defineProps<{
   layouts: KirbyLayout[]

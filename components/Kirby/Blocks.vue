@@ -9,7 +9,7 @@ import {
   LazyKirbyBlockText,
 } from '#components'
 import type { ComponentPublicInstance } from 'vue'
-import type { KirbyBlock } from 'kirby-fest'
+import type { KirbyBlock } from 'kirby-types'
 
 defineProps<{
   blocks: KirbyBlock<string>[]
