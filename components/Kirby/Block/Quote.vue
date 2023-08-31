@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { KirbyBlock } from 'kirby-types'
+import type { KirbyBlock } from '#nuxt-kql'
 
 defineProps<{
   block: KirbyBlock<'quote'>

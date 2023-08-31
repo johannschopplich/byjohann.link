@@ -9,7 +9,7 @@ export interface ResolvedKirbyImage {
 </script>
 
 <script setup lang="ts">
-import type { KirbyBlock } from 'kirby-types'
+import type { KirbyBlock } from '#nuxt-kql'
 
 const props = defineProps<{
   block: KirbyBlock<
