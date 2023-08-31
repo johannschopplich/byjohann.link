@@ -14,7 +14,7 @@ const page = usePage<KirbyLinktreeData>()
   >
     <div
       class="mx-[-50vw] h-[80rem] w-[160rem] translate-y-[-90%]"
-      style="background: radial-gradient(50% 50%, #ff9320 0%, transparent 100%)"
+      style="background: radial-gradient(50% 50%, #89937a 0%, transparent 100%)"
     />
     <div class="noisey absolute inset-0 bg-repeat opacity-40" />
     <div
