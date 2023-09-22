@@ -5,7 +5,6 @@ import {
   presetWind,
   transformerDirectives,
 } from 'unocss'
-import { theme } from '@unocss/preset-wind'
 import { presetForms } from '@julr/unocss-preset-forms'
 import type { Theme } from '@unocss/preset-wind'
 
@@ -43,7 +42,7 @@ export default defineConfig<Theme>({
       ivory: '#fefaf7',
     },
     fontFamily: {
-      heading: `"Clash Display",${theme.fontFamily!.sans}`,
+      heading: '"Clash Display", ui-sans-serif, system-ui, sans-serif',
     },
   },
   rules: [
