@@ -14,7 +14,8 @@
 1. Start the development server using `pnpm run dev`
 2. Visit [localhost:3000](http://localhost:3000/)
 
-> ℹ️ Enable [Take Over Mode](https://vuejs.org/guide/typescript/overview.html#takeover-mode) in Visual Studio Code.
+> [!NOTE]
+> Enable [Take Over Mode](https://vuejs.org/guide/typescript/overview.html#volar-takeover-mode) in Visual Studio Code.
 
 ### Production
 

@@ -4,9 +4,11 @@ import '~/assets/css/prose.css'
 
 import favicon from '~/assets/favicon.svg?raw'
 
+const { languageCode } = getLocalePreference()
+
 useHead({
   htmlAttrs: {
-    lang: 'de',
+    lang: languageCode === 'de' ? 'de' : 'en',
     class: 'bg-ivory',
   },
   link: [

@@ -14,7 +14,7 @@
     "prepare": "nuxi prepare"
   },
   "devDependencies": {
-    "@byjohann/eslint-config": "^0.1.2",
+    "@byjohann/eslint-config": "^0.2.2",
     "@iconify-json/carbon": "^1.1.21",
     "@julr/unocss-preset-forms": "^0.0.5",
     "@sindresorhus/slugify": "^2.2.1",

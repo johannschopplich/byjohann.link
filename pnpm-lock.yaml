@@ -9,8 +9,8 @@ overrides:
 
 devDependencies:
   '@byjohann/eslint-config':
-    specifier: ^0.1.2
-    version: 0.1.2(eslint@8.49.0)(typescript@5.2.2)
+    specifier: ^0.2.2
+    version: 0.2.2(eslint@8.49.0)(typescript@5.2.2)
   '@iconify-json/carbon':
     specifier: ^1.1.21
     version: 1.1.21
@@ -372,8 +372,8 @@ packages:
       to-fast-properties: 2.0.0
     dev: true
 
-  /@byjohann/eslint-config@0.1.2(eslint@8.49.0)(typescript@5.2.2):
-    resolution: {integrity: sha512-cM3RaE2IactWb4BGuhtt4N2Ug0B7cus7V28w7BGU4q6dx14nHt3XilSRCP3fPPQj3qeBWle9JZwe/O8OS5dsbg==}
+  /@byjohann/eslint-config@0.2.2(eslint@8.49.0)(typescript@5.2.2):
+    resolution: {integrity: sha512-Z544oGydrJbOoPjPnp3VNFZHpkaqwLjklL/WYh0/sc9UXzXYf0U4C+n4QFl553VTw/X2PHwxl+kowwQoChRzjw==}
     peerDependencies:
       eslint: '*'
       typescript: '*'
