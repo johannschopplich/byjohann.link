@@ -9,16 +9,9 @@ const page = usePage<KirbyLinktreeData>()
 </script>
 
 <template>
-  <div
-    class="absolute left-0 right-0 top-0 z-[-1] h-[100px] flex justify-center overflow-hidden md:h-[200px]"
-  >
-    <div
-      class="mx-[-50vw] h-[80rem] w-[160rem] translate-y-[-90%]"
-      style="background: radial-gradient(50% 50%, #89937a 0%, transparent 100%)"
-    />
-    <div class="noisey absolute inset-0 bg-repeat opacity-40" />
-    <div
-      class="absolute inset-x-0 bottom-0 h-[40%] transform-gpu from-ivory to-ivory/0 bg-gradient-to-t"
+  <div class="mx-auto max-w-[480px]">
+    <span
+      class="fixed bottom-[calc(100%-200px)] aspect-square max-w-[480px] w-full rounded-full from-secondary-200 to-ivory bg-gradient-to-b opacity-70 blur-3xl -z-50"
     />
   </div>
 
@@ -34,11 +27,3 @@ const page = usePage<KirbyLinktreeData>()
     />
   </header>
 </template>
-
-<style scoped>
-.noisey {
-  background-image: url('/images/noise.png');
-  background-repeat: repeat;
-  background-size: 100px 100px;
-}
-</style>

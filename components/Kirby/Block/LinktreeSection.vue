@@ -45,7 +45,7 @@ const linksWithIcons = props.block.content.links.map((item) => {
           v-if="item.icon"
           class="absolute inset-y-0 left-3 flex items-center"
         >
-          <span :class="['h-[1.75em] w-[1.75em]', item.icon]" />
+          <span class="h-[1.75em] w-[1.75em]" :class="[item.icon]" />
         </span>
         <span>
           {{ item.title }}

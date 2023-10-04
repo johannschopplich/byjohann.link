@@ -45,6 +45,9 @@ export default defineConfig<Theme>({
       heading: '"Clash Display", ui-sans-serif, system-ui, sans-serif',
     },
   },
+  shortcuts: {
+    'max-w-content': 'mx-auto w-[min(100%-2rem,640px)]',
+  },
   rules: [
     [
       'text-underline',

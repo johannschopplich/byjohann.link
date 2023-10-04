@@ -23,7 +23,7 @@ useHead({
 <template>
   <AppHeader />
 
-  <main id="main" class="mx-auto mb-16 w-[min(100%-2rem,640px)]">
+  <main id="main" class="max-w-content mb-16">
     <NuxtPage />
   </main>
 </template>
