@@ -9,11 +9,9 @@ const page = usePage<KirbyLinktreeData>()
 </script>
 
 <template>
-  <div
-    class="fixed inset-x-0 bottom-[calc(100%-200px)] flex justify-center -z-50"
-  >
-    <div
-      class="aspect-square w-full max-w-screen-sm rounded-full from-secondary-300 to-ivory bg-gradient-to-b blur-3xl"
+  <div class="mx-auto max-w-screen-sm">
+    <span
+      class="fixed bottom-[calc(100%-200px)] aspect-square w-full max-w-screen-sm rounded-full from-secondary-200 to-ivory bg-gradient-to-b blur-3xl -z-50"
     />
   </div>
 
