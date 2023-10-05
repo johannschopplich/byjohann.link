@@ -47,10 +47,31 @@ const linksWithIcons = props.block.content.links.map((item) => {
         >
           <span class="h-[1.75em] w-[1.75em]" :class="[item.icon]" />
         </span>
-        <span>
+        <span
+          v-if="item.title.toLowerCase().includes('vlog')"
+          class="text-shimmer [background-image:linear-gradient(110deg,#000,45%,#89937A,55%,#000)] bg-[length:250%_100%] bg-clip-text text-transparent"
+        >
+          {{ item.title }}
+        </span>
+        <span v-else>
           {{ item.title }}
         </span>
       </ElementButton>
     </div>
   </div>
 </template>
+
+<style scoped>
+@keyframes text-shimmer {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -200% 0;
+  }
+}
+
+.text-shimmer {
+  animation: text-shimmer 2.5s ease-out infinite alternate;
+}
+</style>
