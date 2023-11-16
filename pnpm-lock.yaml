@@ -45,8 +45,8 @@ devDependencies:
     specifier: ^3.8.1
     version: 3.8.1(@types/node@20.9.0)(eslint@8.53.0)(typescript@5.2.2)(vite@4.5.0)(vue-tsc@1.8.22)
   nuxt-kql:
-    specifier: ^1.1.1
-    version: 1.1.1(vue@3.3.8)
+    specifier: ^1.1.2
+    version: 1.1.2(vue@3.3.8)
   prettier:
     specifier: ^3.1.0
     version: 3.1.0
@@ -1531,6 +1531,7 @@ packages:
     dependencies:
       is-glob: 4.0.3
       micromatch: 4.0.5
+      napi-wasm: 1.1.0
     dev: true
     bundledDependencies:
       - napi-wasm
@@ -5764,6 +5765,10 @@ packages:
     hasBin: true
     dev: true
 
+  /napi-wasm@1.1.0:
+    resolution: {integrity: sha512-lHwIAJbmLSjF9VDRm9GoVOy9AGp3aIvkjv+Kvz9h16QR3uSVYH78PNQUnT2U4X53mhlnV2M7wrhibQ3GHicDmg==}
+    dev: true
+
   /natural-compare@1.4.0:
     resolution: {integrity: sha512-OWND8ei3VtNC9h7V60qff3SVobHr996CTwgxubgyQYEpg290h9J0buyECNNJexkFm5sOajh5G116RYA1c8ZMSw==}
     dev: true
@@ -6063,8 +6068,8 @@ packages:
       fsevents: 2.3.3
     dev: true
 
-  /nuxt-kql@1.1.1(vue@3.3.8):
-    resolution: {integrity: sha512-QCivl/hey568bGAl+SB75O+WQc+2bipXOhAC0HKnR1dBZ/4W/ndJqGN/I/GqLNytp184rTfRYJ2ryGEtBh+rfQ==}
+  /nuxt-kql@1.1.2(vue@3.3.8):
+    resolution: {integrity: sha512-Ac4VXQ2nJ2LesmlqypXzMqsQUy7sPfCTJIW3CUz2VayM5I4pIniEZVPl8Y7humhLckR0maFqYH3e1yTdFlA8pw==}
     dependencies:
       '@nuxt/kit': 3.8.1
       '@vueuse/core': 10.6.1(vue@3.3.8)
