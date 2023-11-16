@@ -4,5 +4,9 @@ main = "./.output/server/index.mjs"
 workers_dev = false
 compatibility_date = "2023-06-13"
 
+kv_namespaces = [
+  { binding = "__LINKTREE", id = "linktree" }
+]
+
 [site]
 bucket = ".output/public"
