@@ -20,6 +20,10 @@ export default defineNuxtConfig({
 
   kql: {
     auth: 'bearer',
+    server: {
+      cache: true,
+      storage: 'kql',
+    },
   },
 
   unocss: {
@@ -34,6 +38,18 @@ export default defineNuxtConfig({
         crawlLinks: shouldPrerender,
         routes: ['/'],
       }),
+    },
+    storage: {
+      kql: {
+        driver: 'cloudflareKVBinding',
+        binding: 'linktree',
+      },
+    },
+    devStorage: {
+      kql: {
+        driver: 'fs',
+        base: 'data/kql',
+      },
     },
   },
 
