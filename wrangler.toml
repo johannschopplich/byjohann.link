@@ -5,7 +5,7 @@ workers_dev = false
 compatibility_date = "2023-06-13"
 
 kv_namespaces = [
-  { binding = "__LINKTREE", id = "linktree" }
+  { binding = "__LINKTREE", id = "7c028d5423d34687af18f9989733f502" }
 ]
 
 [site]
