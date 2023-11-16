@@ -23,7 +23,7 @@ export default defineNuxtConfig({
     server: {
       cache: true,
       storage: 'kql',
-      swr: false,
+      maxAge: 60,
     },
   },
 
