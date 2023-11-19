@@ -15,17 +15,17 @@ const props = defineProps<{
 }>()
 
 const socialIcons: Record<string, string> = {
-  'instagram.com': 'i-carbon:logo-instagram',
-  'linkedin.com': 'i-carbon:logo-linkedin',
-  'github.com': 'i-carbon:logo-github',
-  'twitter.com': 'i-carbon:logo-twitter',
-  'youtube.com': 'i-carbon:logo-youtube',
-  'mail@johannschopplich.com': 'i-carbon:email',
+  'https://www.instagram.com': 'i-carbon:logo-instagram',
+  'https://www.linkedin.com': 'i-carbon:logo-linkedin',
+  'https://github.com/': 'i-carbon:logo-github',
+  'https://twitter.com': 'i-carbon:logo-twitter',
+  'https://www.youtube.com': 'i-carbon:logo-youtube',
+  'mailto:': 'i-carbon:email',
 }
 
 const linksWithIcons = props.block.content.links.map((item) => {
   const hostname = Object.keys(socialIcons).find((icon) =>
-    item.link.includes(icon),
+    item.link.startsWith(icon),
   )
 
   return {
