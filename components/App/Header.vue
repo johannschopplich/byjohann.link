@@ -11,7 +11,7 @@ const page = usePage<KirbyLinktreeData>()
 <template>
   <div class="mx-auto max-w-screen-sm">
     <span
-      class="fixed bottom-[calc(100%-200px)] aspect-square w-full max-w-screen-sm rounded-full from-secondary-200 to-ivory bg-gradient-to-b blur-3xl -z-50"
+      class="to-off-white fixed bottom-[calc(100%-200px)] aspect-square w-full max-w-screen-sm rounded-full from-secondary-200 bg-gradient-to-b blur-3xl -z-50"
     />
   </div>
 
@@ -23,7 +23,7 @@ const page = usePage<KirbyLinktreeData>()
       :width="page.profileImage.width"
       :height="page.profileImage.height"
       :alt="page.profileImage.alt"
-      class="mx-auto w-28 rounded-full ring-1 ring-offset-2 ring-secondary-100 ring-offset-ivory"
+      class="ring-offset-off-white mx-auto w-28 rounded-full ring-1 ring-offset-2 ring-secondary-100"
     />
   </header>
 </template>

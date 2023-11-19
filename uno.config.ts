@@ -39,7 +39,11 @@ export default defineConfig<Theme>({
         900: '#3F2000',
         950: '#231200',
       },
-      ivory: '#fefaf7',
+      off: {
+        white: {
+          DEFAULT: '#fefaf7',
+        },
+      },
     },
     fontFamily: {
       heading: '"Clash Display", ui-sans-serif, system-ui, sans-serif',

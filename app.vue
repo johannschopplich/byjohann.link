@@ -9,7 +9,7 @@ const { languageCode } = getLocalePreference()
 useHead({
   htmlAttrs: {
     lang: languageCode === 'de' ? 'de' : 'en',
-    class: 'bg-ivory',
+    class: 'bg-off-white',
   },
   link: [
     {
