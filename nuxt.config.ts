@@ -43,7 +43,7 @@ export default defineNuxtConfig({
     storage: {
       kql: {
         driver: 'cloudflareKVBinding',
-        binding: '__LINKTREE',
+        binding: '__BYJOHANN_LINK',
       },
     },
     devStorage: {
