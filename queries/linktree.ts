@@ -17,7 +17,7 @@ export interface KirbyLinktreeData {
     alt: string
     thumbhash: string
   }
-  cover?: {
+  thumbnail?: {
     url: string
   }
 }
@@ -36,8 +36,8 @@ export const linktreeQuery: KirbyQuerySchema = {
       query: 'page.files.find("profile-image.jpg")',
       select: ['srcset', 'width', 'height', 'alt', 'thumbhash'],
     },
-    cover: {
-      query: 'page.cover.toFile?.resize(1200)',
+    thumbnail: {
+      query: 'page.thumbnail.or(site.thumbnail).toFile?.resize(1200)',
       select: ['url'],
     },
   },

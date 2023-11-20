@@ -25,7 +25,7 @@ export function setPage<T extends Record<string, any>>(page?: T) {
   const title = page.title
   const description = page.description
   const url = joinURL(siteUrl, useRoute().path)
-  const image = page?.cover?.url
+  const image = page?.thumbnail?.url
 
   useHead({
     bodyAttrs: {
