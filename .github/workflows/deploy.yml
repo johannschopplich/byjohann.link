@@ -25,7 +25,7 @@ jobs:
       - name: Build
         run: pnpm run build
         env:
-          NITRO_PRESET: cloudflare
+          NITRO_PRESET: cloudflare_module
           KIRBY_BASE_URL: ${{ secrets.KIRBY_BASE_URL }}
           KIRBY_API_TOKEN: ${{ secrets.KIRBY_API_TOKEN }}
 
