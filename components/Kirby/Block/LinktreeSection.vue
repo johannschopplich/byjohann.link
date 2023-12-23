@@ -49,7 +49,7 @@ const linksWithIcons = props.block.content.links.map((item) => {
           <span class="h-[1.75em] w-[1.75em]" :class="[item.icon]" />
         </span>
         <component
-          :is="item.title.toLowerCase().includes('vlog') ? TextShimmer : 'span'"
+          :is="item.title.toLowerCase().includes('blog') ? TextShimmer : 'span'"
         >
           {{ item.title }}
         </component>
