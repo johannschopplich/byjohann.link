@@ -55,11 +55,8 @@ export default defineNuxtConfig({
     },
   },
 
-  experimental: {
+  future: {
     typescriptBundlerResolution: true,
-    payloadExtraction: shouldPrerender,
-    inlineSSRStyles: false,
-    headNext: true,
   },
 
   typescript: {
