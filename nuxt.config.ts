@@ -7,7 +7,7 @@ export default defineNuxtConfig({
   modules: [
     '@byjohann/ui/nuxt',
     '@unocss/nuxt',
-    '@unlazy/nuxt',
+    // '@unlazy/nuxt',
     '@vueuse/nuxt',
     'nuxt-kql',
   ],

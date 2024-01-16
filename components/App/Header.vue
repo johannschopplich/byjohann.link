@@ -16,13 +16,21 @@ const page = usePage<KirbyLinktreeData>()
   </div>
 
   <header class="mb-8 mt-16">
-    <UnLazyImage
+    <!-- <UnLazyImage
       :thumbhash="page.profileImage.thumbhash"
       :src-set="page.profileImage.srcset"
       auto-sizes
       :width="page.profileImage.width"
       :height="page.profileImage.height"
       :alt="page.profileImage.alt"
+      class="mx-auto w-28 rounded-full ring-1 ring-offset-2 ring-secondary-100 ring-offset-off-white"
+    /> -->
+    <img
+      :srcset="page.profileImage.srcset"
+      :width="page.profileImage.width"
+      :height="page.profileImage.height"
+      :alt="page.profileImage.alt"
+      sizes="112px"
       class="mx-auto w-28 rounded-full ring-1 ring-offset-2 ring-secondary-100 ring-offset-off-white"
     />
   </header>
