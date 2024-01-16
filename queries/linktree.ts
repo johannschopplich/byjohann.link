@@ -33,7 +33,7 @@ export const linktreeQuery: KirbyQuerySchema = {
     description: true,
     blocks: 'page.text.toResolvedBlocks',
     profileImage: {
-      query: 'page.files.find("profile-image.jpg")',
+      query: 'page.files.find("profile-image.png")',
       select: ['srcset', 'width', 'height', 'alt', 'thumbhash'],
     },
     thumbnail: {
