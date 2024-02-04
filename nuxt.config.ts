@@ -55,10 +55,6 @@ export default defineNuxtConfig({
     },
   },
 
-  future: {
-    typescriptBundlerResolution: true,
-  },
-
   typescript: {
     typeCheck: 'build',
     shim: false,
