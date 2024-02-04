@@ -7,7 +7,8 @@ const { data, error } = await useKql(linktreeQuery, {
 })
 
 if (!data.value?.result) {
-  setResponseStatus(useRequestEvent(), 404)
+  const event = useRequestEvent()
+  if (event) setResponseStatus(event, 404)
 }
 
 // Store page data
