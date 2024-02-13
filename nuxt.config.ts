@@ -1,7 +1,7 @@
 import { consola } from 'consola'
 
 const shouldPrerender = process.env.NITRO_PRERENDER_PAGES === 'true'
-if (shouldPrerender) consola.info('Nitro page prerendering enabled')
+if (shouldPrerender) consola.info('Prerendering enabled')
 
 export default defineNuxtConfig({
   modules: [
@@ -44,7 +44,7 @@ export default defineNuxtConfig({
     storage: {
       kql: {
         driver: 'cloudflareKVBinding',
-        binding: '__BYJOHANN_LINK',
+        binding: 'BYJOHANN_LINK_KQL',
       },
     },
     devStorage: {

@@ -1,5 +1,6 @@
 # byjohann.link
 
+> [!TIP]
 > 📖 [Read the documentation](https://nuxt.com).
 
 ## Usage
