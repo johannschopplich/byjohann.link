@@ -45,7 +45,7 @@ export default defineConfig<Theme>({
       },
     },
     fontFamily: {
-      heading: '"Clash Display", ui-sans-serif, system-ui, sans-serif',
+      heading: '"Clash Display", sans-serif',
     },
   },
   shortcuts: {

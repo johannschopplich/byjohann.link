@@ -32,6 +32,13 @@ export default defineNuxtConfig({
     preflight: true,
   },
 
+  fonts: {
+    defaults: {
+      weights: [400, 600],
+      styles: ['normal'],
+    },
+  },
+
   nitro: {
     prerender: {
       // Enable Nitro's crawler to prerender all pages (optional)
