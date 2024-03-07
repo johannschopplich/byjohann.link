@@ -14,23 +14,24 @@ const props = defineProps<{
   >
 }>()
 
-const socialIcons: Record<string, string> = {
+const ICONS: Record<string, string> = {
+  // Social
   'https://www.instagram.com': 'i-carbon:logo-instagram',
   'https://www.linkedin.com': 'i-carbon:logo-linkedin',
   'https://github.com': 'i-carbon:logo-github',
   'https://twitter.com': 'i-carbon:logo-twitter',
   'https://www.youtube.com': 'i-carbon:logo-youtube',
   'mailto:': 'i-carbon:email',
+  // Products
+  'https://kirby': 'i-logos:kirby-icon',
 }
 
 const linksWithIcons = props.block.content.links.map((item) => {
-  const hostname = Object.keys(socialIcons).find((icon) =>
-    item.link.startsWith(icon),
-  )
+  const hostname = Object.keys(ICONS).find((icon) => item.link.startsWith(icon))
 
   return {
     ...item,
-    ...(hostname && { icon: socialIcons[hostname] }),
+    ...(hostname && { icon: ICONS[hostname] }),
   }
 })
 </script>
