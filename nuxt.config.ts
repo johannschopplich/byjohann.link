@@ -6,8 +6,8 @@ if (shouldPrerender) consola.info('Prerendering enabled')
 export default defineNuxtConfig({
   modules: [
     '@byjohann/ui/nuxt',
+    '@nuxt/fonts',
     '@unocss/nuxt',
-    // '@unlazy/nuxt',
     '@vueuse/nuxt',
     'nuxt-kql',
   ],
@@ -56,7 +56,7 @@ export default defineNuxtConfig({
   },
 
   typescript: {
-    typeCheck: 'build',
+    // typeCheck: 'build',
     shim: false,
   },
 })

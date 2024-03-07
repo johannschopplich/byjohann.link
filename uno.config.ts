@@ -1,7 +1,6 @@
 import {
   defineConfig,
   presetIcons,
-  presetWebFonts,
   presetWind,
   transformerDirectives,
 } from 'unocss'
@@ -63,16 +62,6 @@ export default defineConfig<Theme>({
       },
     ],
   ],
-  presets: [
-    presetForms(),
-    presetWind(),
-    presetIcons(),
-    presetWebFonts({
-      provider: 'fontshare',
-      fonts: {
-        clash: 'Clash Display',
-      },
-    }),
-  ],
+  presets: [presetForms(), presetWind(), presetIcons()],
   transformers: [transformerDirectives()],
 })
