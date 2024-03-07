@@ -1,8 +1,5 @@
 import { consola } from 'consola'
 
-const shouldPrerender = process.env.NITRO_PRERENDER_PAGES === 'true'
-if (shouldPrerender) consola.info('Prerendering enabled')
-
 export default defineNuxtConfig({
   modules: [
     '@byjohann/ui/nuxt',
@@ -40,14 +37,6 @@ export default defineNuxtConfig({
   },
 
   nitro: {
-    prerender: {
-      // Enable Nitro's crawler to prerender all pages (optional)
-      // If Kirby content changes, the frontend will have to be rebuilt
-      ...(shouldPrerender && {
-        crawlLinks: shouldPrerender,
-        routes: ['/'],
-      }),
-    },
     storage: {
       kql: {
         driver: 'cloudflareKVBinding',
@@ -57,7 +46,7 @@ export default defineNuxtConfig({
     devStorage: {
       kql: {
         driver: 'fs',
-        base: '.nuxt/data',
+        base: '.data',
       },
     },
   },
