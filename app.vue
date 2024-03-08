@@ -4,6 +4,7 @@ import '~/assets/css/prose.css'
 
 // import favicon from '~/assets/favicon.svg?raw'
 
+const { siteUrl } = useRuntimeConfig().public
 const { languageCode } = getLocalePreference()
 
 useServerSeoMeta({
@@ -28,6 +29,14 @@ useServerHead({
     {
       rel: 'apple-touch-icon',
       href: '/apple-touch-icon.png',
+    },
+  ],
+  script: [
+    {
+      src: 'https://plausible.io/js/script.js',
+      // Strip protocol
+      'data-domain': siteUrl.replace(/(^\w+:|^)\/\//, ''),
+      defer: true,
     },
   ],
 })
