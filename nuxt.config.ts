@@ -1,5 +1,3 @@
-import { consola } from 'consola'
-
 export default defineNuxtConfig({
   modules: [
     '@byjohann/ui/nuxt',
