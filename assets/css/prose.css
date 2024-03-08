@@ -179,7 +179,7 @@
  * Custom styles
  */
 .prose :where(h1, h2, h3, h4, h5, h6):not(:where(.not-prose, .not-prose *)) {
-  --at-apply: 'font-heading text-size-[1em] tracking-wide';
+  --at-apply: 'font-heading text-[1em] tracking-wide';
 }
 
 .prose :where(h1):not(:where(.not-prose, .not-prose *)) {

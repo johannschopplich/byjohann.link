@@ -28,10 +28,20 @@ export default defineNuxtConfig({
   },
 
   fonts: {
-    defaults: {
-      weights: [400, 600],
-      styles: ['normal'],
-    },
+    families: [
+      {
+        name: 'Cooper Hewitt',
+        global: true,
+        src: '/fonts/CooperHewitt.woff2',
+        weight: 400,
+      },
+      {
+        name: 'Cooper Hewitt',
+        global: true,
+        src: '/fonts/CooperHewitt-Bold.woff2',
+        weight: 700,
+      },
+    ],
   },
 
   nitro: {

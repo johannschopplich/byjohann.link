@@ -45,7 +45,7 @@ export default defineConfig<Theme>({
       },
     },
     fontFamily: {
-      heading: '"Clash Display", sans-serif',
+      heading: 'Cooper Hewitt, sans-serif',
     },
   },
   shortcuts: {
