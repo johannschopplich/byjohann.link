@@ -31,15 +31,7 @@ export default defineNuxtConfig({
     families: [
       {
         name: 'Cooper Hewitt',
-        global: true,
-        src: '/fonts/CooperHewitt.woff2',
-        weight: 400,
-      },
-      {
-        name: 'Cooper Hewitt',
-        global: true,
-        src: '/fonts/CooperHewitt-Bold.woff2',
-        weight: 700,
+        weights: [400, 700],
       },
     ],
   },
