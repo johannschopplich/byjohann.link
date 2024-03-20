@@ -29,7 +29,7 @@
     "@vueuse/nuxt": "^10.9.0",
     "eslint": "^8.57.0",
     "nuxt": "^3.11.1",
-    "nuxt-kql": "^1.4.11",
+    "nuxt-kql": "^1.4.12",
     "prettier": "^3.2.5",
     "typescript": "^5.4.2",
     "vue-tsc": "^2.0.6"
