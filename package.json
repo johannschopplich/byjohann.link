@@ -16,22 +16,22 @@
     "prepare": "nuxi prepare"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^2.8.3",
+    "@antfu/eslint-config": "^2.11.4",
     "@byjohann/ui": "^0.6.6",
     "@iconify-json/carbon": "^1.1.31",
     "@iconify-json/logos": "^1.1.42",
     "@julr/unocss-preset-forms": "^0.1.0",
-    "@nuxt/fonts": "^0.3.0",
+    "@nuxt/fonts": "^0.5.1",
     "@sindresorhus/slugify": "^2.2.1",
     "@types/node": "^20.11.30",
-    "@unocss/eslint-config": "^0.58.6",
-    "@unocss/nuxt": "^0.58.6",
+    "@unocss/eslint-config": "^0.58.8",
+    "@unocss/nuxt": "^0.58.8",
     "@vueuse/nuxt": "^10.9.0",
     "eslint": "^8.57.0",
     "nuxt": "^3.11.1",
-    "nuxt-kql": "^1.4.12",
+    "nuxt-kql": "^1.4.13",
     "prettier": "^3.2.5",
-    "typescript": "^5.4.2",
-    "vue-tsc": "^2.0.6"
+    "typescript": "^5.4.3",
+    "vue-tsc": "^2.0.7"
   }
 }

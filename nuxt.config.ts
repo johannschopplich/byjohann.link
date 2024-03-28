@@ -18,7 +18,7 @@ export default defineNuxtConfig({
     server: {
       cache: true,
       storage: 'kql',
-      swr: false,
+      swr: true,
       maxAge: 60,
     },
   },
@@ -40,7 +40,7 @@ export default defineNuxtConfig({
     storage: {
       kql: {
         driver: 'cloudflareKVBinding',
-        binding: 'BYJOHANN_LINK_KQL',
+        binding: 'KV_BINDING',
       },
     },
     devStorage: {
