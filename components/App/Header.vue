@@ -1,10 +1,6 @@
 <script setup lang="ts">
 import type { KirbyLinktreeData } from '~/queries'
 
-// Wait for the page to be loaded before rendering this component,
-// otherwise `usePage()` would return `undefined`
-await hasPage()
-
 const page = usePage<KirbyLinktreeData>()
 </script>
 

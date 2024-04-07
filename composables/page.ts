@@ -1,4 +1,5 @@
 import { joinURL } from 'ufo'
+import type { HookResult } from '@nuxt/schema'
 
 /**
  * Returns the currently active page, similar to Kirby's `$page` global variable
@@ -10,14 +11,7 @@ export function usePage<T extends Record<string, any> = Record<string, any>>() {
 /**
  * Sets the currently active page and updates the document head
  */
-export function setPage<T extends Record<string, any>>(page?: T) {
-  const pageState = usePageState()
-
-  if (!page) {
-    pageState.value = 'rejected'
-    return
-  }
-
+export function setPage<T extends Record<string, any>>(page: T) {
   usePage().value = page
 
   // Build the page meta tags
@@ -53,24 +47,19 @@ export function setPage<T extends Record<string, any>>(page?: T) {
     twitterCard: image ? 'summary_large_image' : 'summary',
     ...(image && { twitterImage: image }),
   })
-
-  pageState.value = 'resolved'
 }
 
 /**
- * Returns a promise that resolves when the page data has been loaded or rejected
+ * Resolves components that depend on the finished page setup.
  */
-export async function hasPage() {
-  const state = usePageState()
-
-  await until(state).not.toBe('pending')
-
-  return state.value === 'resolved'
+export function renderPageDependencies() {
+  const nuxtApp = useNuxtApp()
+  nuxtApp._nuxtPageDependenciesRendered = true
+  return nuxtApp.callHook('nuxt-page-dependencies:rendered')
 }
 
-function usePageState() {
-  return useState<'pending' | 'resolved' | 'rejected'>(
-    'app.state.page',
-    () => 'pending',
-  )
+declare module '#app' {
+  interface RuntimeNuxtHooks {
+    'nuxt-page-dependencies:rendered': () => HookResult
+  }
 }

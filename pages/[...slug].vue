@@ -14,6 +14,9 @@ if (!data.value?.result) {
 // Store page data
 const page = data.value?.result
 setPage(page)
+
+// Wait for components that require page data to be loaded
+await renderPageDependencies()
 </script>
 
 <template>
