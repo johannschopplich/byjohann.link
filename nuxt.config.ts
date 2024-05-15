@@ -19,7 +19,7 @@ export default defineNuxtConfig({
       cache: true,
       storage: 'kql',
       swr: false,
-      maxAge: 60 * 60 * 24, // 24 hours
+      maxAge: 60 * 60 * 24 * 30, // 30 days
     },
   },
 
@@ -49,5 +49,9 @@ export default defineNuxtConfig({
         base: '.data',
       },
     },
+  },
+
+  experimental: {
+    componentIslands: true,
   },
 })

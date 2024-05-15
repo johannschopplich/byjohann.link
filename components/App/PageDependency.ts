@@ -1,6 +1,3 @@
-import { defineComponent } from 'vue'
-import { useError, useNuxtApp, useSlots } from '#imports'
-
 export default defineComponent({
   props: {
     tag: {
@@ -31,12 +28,12 @@ export default defineComponent({
           return resolver()
         }
 
-        if (nuxtApp._nuxtPageDependenciesRendered) {
+        if (nuxtApp._pageDependenciesRendered) {
           return resolver()
         }
 
         // Called manually by using the `renderPageDependencies` composable.
-        nuxtApp.hooks.hookOnce('nuxt-page-dependencies:rendered', resolver)
+        nuxtApp.hooks.hookOnce('page-dependencies:rendered', resolver)
 
         // When any error happens, resolve.
         nuxtApp.hooks.hookOnce('app:error', resolver)

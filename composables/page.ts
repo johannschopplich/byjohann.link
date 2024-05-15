@@ -54,12 +54,12 @@ export function setPage<T extends Record<string, any>>(page: T) {
  */
 export function renderPageDependencies() {
   const nuxtApp = useNuxtApp()
-  nuxtApp._nuxtPageDependenciesRendered = true
-  return nuxtApp.callHook('nuxt-page-dependencies:rendered')
+  nuxtApp._pageDependenciesRendered = true
+  return nuxtApp.callHook('page-dependencies:rendered')
 }
 
 declare module '#app' {
   interface RuntimeNuxtHooks {
-    'nuxt-page-dependencies:rendered': () => HookResult
+    'page-dependencies:rendered': () => HookResult
   }
 }

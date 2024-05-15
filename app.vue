@@ -34,8 +34,7 @@ useServerHead({
   script: [
     {
       src: 'https://plausible.io/js/script.js',
-      // Strip protocol
-      'data-domain': siteUrl.replace(/(^\w+:|^)\/\//, ''),
+      'data-domain': new URL(siteUrl).hostname,
       defer: true,
     },
   ],
