@@ -6,8 +6,7 @@ export default defineComponent({
     },
   },
 
-  setup() {
-    const slots = useSlots()
+  setup(_, { slots }) {
     if (!slots.default) {
       return
     }
