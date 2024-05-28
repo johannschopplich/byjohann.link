@@ -8,16 +8,17 @@ export default defineComponent({
       return
     }
 
+    const nuxtApp = useNuxtApp()
     const instance = getCurrentInstance()!
     let vnode: VNode | undefined
 
-    if (instance.vnode.el) {
+    if (import.meta.client && nuxtApp.isHydrating && instance.vnode.el) {
       const fragment = getFragmentHTML(instance.vnode.el, false)
       if (fragment) {
         vnode = createStaticVNode(fragment.join(''), fragment.length)
       }
     }
 
-    return () => (import.meta.server ? slots.default!() : vnode)
+    return () => vnode || slots.default!()
   },
 })
