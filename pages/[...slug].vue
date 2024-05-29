@@ -21,10 +21,10 @@ await renderPageDependencies()
 
 <template>
   <div>
-    <AppServerOnly>
-      <KirbyLayouts v-if="page?.layouts?.length" :layouts="page.layouts" />
-      <KirbyBlocks v-else-if="page?.blocks" :blocks="page.blocks" />
-    </AppServerOnly>
+    <PreferServerRender>
+      <LazyKirbyLayouts v-if="page?.layouts?.length" :layouts="page.layouts" />
+      <LazyKirbyBlocks v-else-if="page?.blocks" :blocks="page.blocks" />
+    </PreferServerRender>
     <DevOnly>
       <AppDebugHelper :data="page" :error="error" />
     </DevOnly>

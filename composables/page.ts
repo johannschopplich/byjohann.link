@@ -1,5 +1,4 @@
 import { joinURL } from 'ufo'
-import type { HookResult } from '@nuxt/schema'
 
 /**
  * Returns the currently active page, similar to Kirby's `$page` global variable
@@ -47,19 +46,4 @@ export function setPage<T extends Record<string, any>>(page: T) {
     twitterCard: image ? 'summary_large_image' : 'summary',
     ...(image && { twitterImage: image }),
   })
-}
-
-/**
- * Resolves components that depend on the finished page setup.
- */
-export function renderPageDependencies() {
-  const nuxtApp = useNuxtApp()
-  nuxtApp._pageDependenciesRendered = true
-  return nuxtApp.callHook('page-dependencies:rendered')
-}
-
-declare module '#app' {
-  interface RuntimeNuxtHooks {
-    'page-dependencies:rendered': () => HookResult
-  }
 }

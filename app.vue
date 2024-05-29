@@ -42,9 +42,9 @@ useServerHead({
 </script>
 
 <template>
-  <AppPageDependency>
+  <PageDependency>
     <AppHeader />
-  </AppPageDependency>
+  </PageDependency>
 
   <main id="main" class="max-w-content mb-16">
     <NuxtPage />

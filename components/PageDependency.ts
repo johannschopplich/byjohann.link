@@ -12,10 +12,9 @@ export default defineComponent({
     }
 
     const nuxtApp = useNuxtApp()
+    const error = useError()
 
     if (import.meta.server) {
-      const error = useError()
-
       // Defer rendering the component until the page component has rendered.
       return new Promise((resolve) => {
         const resolver = () => {
