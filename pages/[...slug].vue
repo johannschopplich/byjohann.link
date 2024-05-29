@@ -21,10 +21,10 @@ await renderPageDependencies()
 
 <template>
   <div>
-    <WhenIdleOnly>
+    <DelayHydration>
       <LazyKirbyLayouts v-if="page?.layouts?.length" :layouts="page.layouts" />
       <LazyKirbyBlocks v-else-if="page?.blocks" :blocks="page.blocks" />
-    </WhenIdleOnly>
+    </DelayHydration>
     <DevOnly>
       <AppDebugHelper :data="page" :error="error" />
     </DevOnly>
