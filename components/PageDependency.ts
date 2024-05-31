@@ -7,10 +7,6 @@ export default defineComponent({
   },
 
   setup(_, { slots }) {
-    if (!slots.default) {
-      return
-    }
-
     const nuxtApp = useNuxtApp()
     const error = useError()
 
@@ -18,7 +14,7 @@ export default defineComponent({
       // Defer rendering the component until the page component has rendered.
       return new Promise((resolve) => {
         const resolver = () => {
-          resolve(() => slots.default!())
+          resolve(() => slots.default?.())
         }
 
         // If Nuxt has an error, immediately render the component.
@@ -39,6 +35,6 @@ export default defineComponent({
       })
     }
 
-    return () => slots.default!()
+    return () => slots.default?.()
   },
 })

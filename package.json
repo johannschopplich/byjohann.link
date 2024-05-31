@@ -5,15 +5,16 @@
   "packageManager": "pnpm@9.1.4",
   "scripts": {
     "dev": "nuxi dev",
-    "build": "nuxi build",
-    "generate": "nuxi generate",
+    "build:uno": "unocss \"**/*.vue\" --out-file assets/css/uno.css --minify",
+    "build": "pnpm run build:uno && nuxi build",
+    "generate": "pnpm run build:uno && nuxi generate",
     "preview": "nuxi preview",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "format": "prettier \"**/*.{css,html,json,md,mjs,ts,vue,yml}\" --write",
     "format:check": "prettier \"**/*.{css,html,json,md,mjs,ts,vue,yml}\" --check",
     "test:types": "vue-tsc --noEmit",
-    "prepare": "nuxi prepare"
+    "prepare": "echo \"/**/\" >> assets/css/uno.css && nuxi prepare"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^2.19.1",
@@ -30,7 +31,7 @@
     "eslint": "^9.3.0",
     "nuxt": "^3.11.2",
     "nuxt-kql": "^1.4.17",
-    "nuxt-lcp-speedup": "^0.7.0",
+    "nuxt-lcp-speedup": "^0.8.1",
     "prettier": "^3.2.5",
     "typescript": "^5.4.5",
     "vue-tsc": "^2.0.19"

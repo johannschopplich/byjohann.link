@@ -1,5 +1,7 @@
 import process from 'node:process'
 
+const isDev = process.env.NODE_ENV === 'development'
+
 export default defineNuxtConfig({
   modules: [
     '@byjohann/ui/nuxt',
@@ -27,18 +29,20 @@ export default defineNuxtConfig({
   },
 
   features: {
-    inlineStyles: false,
+    inlineStyles: true,
   },
 
   lcpSpeedup: {
     disablePrefetchLinks: true,
+    disableStylesheets: true,
   },
 
   unocss: {
-    // We manually import the reset and `uno.css` styles
-    autoImport: false,
-    preflight: false,
-    // UnoCSS disables the `inlineStyles` Nuxt feature by default, which we may want to use
+    // We manually build and inline the `uno.css` at build-time, because the
+    // UnoCSS Vite plugin don't get inlined by Nuxt
+    autoImport: isDev,
+    preflight: isDev,
+    // UnoCSS disables the `inlineStyles` Nuxt feature by default, which we want to use
     disableNuxtInlineStyle: false,
   },
 
