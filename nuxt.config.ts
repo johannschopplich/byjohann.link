@@ -1,3 +1,5 @@
+import process from 'node:process'
+
 export default defineNuxtConfig({
   modules: [
     '@byjohann/ui/nuxt',
@@ -24,8 +26,20 @@ export default defineNuxtConfig({
     },
   },
 
+  features: {
+    inlineStyles: false,
+  },
+
+  lcpSpeedup: {
+    disablePrefetchLinks: true,
+  },
+
   unocss: {
-    preflight: true,
+    // We manually import the reset and `uno.css` styles
+    autoImport: false,
+    preflight: false,
+    // UnoCSS disables the `inlineStyles` Nuxt feature by default, which we may want to use
+    disableNuxtInlineStyle: false,
   },
 
   fonts: {
@@ -39,10 +53,16 @@ export default defineNuxtConfig({
 
   nitro: {
     storage: {
-      kql: {
-        driver: 'cloudflareKVBinding',
-        binding: 'KV_BINDING',
-      },
+      kql:
+        process.env.NITRO_PRESET === 'cloudflare_pages'
+          ? {
+              driver: 'cloudflareKVBinding',
+              binding: 'KV_BINDING',
+            }
+          : {
+              driver: 'fs',
+              base: '.data',
+            },
     },
     devStorage: {
       kql: {
