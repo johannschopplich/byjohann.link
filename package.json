@@ -4,17 +4,18 @@
   "private": true,
   "packageManager": "pnpm@9.1.4",
   "scripts": {
-    "dev": "nuxi dev",
-    "build:uno": "unocss \"**/*.vue\" --out-file assets/css/uno.css --minify",
-    "build": "pnpm run build:uno && nuxi build",
-    "generate": "pnpm run build:uno && nuxi generate",
+    "dev": "pnpm run uno:clean && nuxi dev",
+    "build": "pnpm run uno:build && nuxi build",
+    "generate": "pnpm run uno:build && nuxi generate",
     "preview": "nuxi preview",
+    "uno:clean": "echo \"/**/\" >> assets/css/uno.css",
+    "uno:build": "unocss \"**/*.vue\" --out-file assets/css/uno.css --minify",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "format": "prettier \"**/*.{css,html,json,md,mjs,ts,vue,yml}\" --write",
     "format:check": "prettier \"**/*.{css,html,json,md,mjs,ts,vue,yml}\" --check",
     "test:types": "vue-tsc --noEmit",
-    "prepare": "echo \"/**/\" >> assets/css/uno.css && nuxi prepare"
+    "prepare": "pnpm run uno:clean && nuxi prepare"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^2.19.1",
