@@ -8,7 +8,7 @@ export default defineNuxtConfig({
     '@nuxt/fonts',
     '@unocss/nuxt',
     '@vueuse/nuxt',
-    'nuxt-lcp-speedup',
+    'nuxt-vitalizer',
     'nuxt-kql',
   ],
 

@@ -50,9 +50,9 @@ importers:
       nuxt-kql:
         specifier: ^1.4.18
         version: 1.4.18(magicast@0.3.4)(rollup@4.18.0)(vue@3.4.29(typescript@5.4.5))
-      nuxt-lcp-speedup:
-        specifier: ^0.9.0
-        version: 0.9.0(magicast@0.3.4)(rollup@4.18.0)
+      nuxt-vitalizer:
+        specifier: ^0.10.0
+        version: 0.10.0(magicast@0.3.4)(rollup@4.18.0)
       prettier:
         specifier: ^3.3.2
         version: 3.3.2
@@ -3567,8 +3567,8 @@ packages:
   nuxt-kql@1.4.18:
     resolution: {integrity: sha512-NGMsjfJ5wSqw/mv32ZDuY2oVIW+j1VAkfLryViq673Yf9RLf4Os9G1rAohEqpGje/xuOdTPydcsyHD1DLcN5Aw==}
 
-  nuxt-lcp-speedup@0.9.0:
-    resolution: {integrity: sha512-K+mtgORWhwRgqPZFS+O/YlBts9Zuj2zJmRfcvgkiA9xq60ghp2sbzOVNLotgMA1l0aXy/1WMxxvHiwHyEeT46w==}
+  nuxt-vitalizer@0.10.0:
+    resolution: {integrity: sha512-z5leudr8wD2msKl7ETLGUICSOVoXVLMA8bAeRuWN4/UuYl7g7G2k7Idzl1z8ft/VmoYZ9ld3J0/2UZOZuxxzog==}
 
   nuxt@3.12.2:
     resolution: {integrity: sha512-DkQvGbILEUwvXJ9TG2iTMvyO6D9ABLyA5bJ+ns8ZgWatfSXC7hXnL//PTYF7neYUzyYn0e5fLHcXgRLa/9YoLA==}
@@ -9221,7 +9221,7 @@ snapshots:
       - supports-color
       - vue
 
-  nuxt-lcp-speedup@0.9.0(magicast@0.3.4)(rollup@4.18.0):
+  nuxt-vitalizer@0.10.0(magicast@0.3.4)(rollup@4.18.0):
     dependencies:
       '@nuxt/kit': 3.12.2(magicast@0.3.4)(rollup@4.18.0)
       defu: 6.1.4
