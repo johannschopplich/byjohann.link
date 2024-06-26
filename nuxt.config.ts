@@ -32,7 +32,7 @@ export default defineNuxtConfig({
     inlineStyles: true,
   },
 
-  lcpSpeedup: {
+  vitalizer: {
     disablePrefetchLinks: true,
     disableStylesheets: true,
   },
