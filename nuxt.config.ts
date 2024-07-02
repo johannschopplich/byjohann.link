@@ -32,6 +32,10 @@ export default defineNuxtConfig({
     inlineStyles: true,
   },
 
+  future: {
+    compatibilityVersion: 4,
+  },
+
   vitalizer: {
     disablePrefetchLinks: true,
     disableStylesheets: true,
