@@ -1,3 +1,19 @@
+@font-face {
+  font-family: 'Cooper Hewitt';
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: url('/fonts/CooperHewitt-400.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Cooper Hewitt';
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  src: url('/fonts/CooperHewitt-700.woff2') format('woff2');
+}
+
 :root {
   --un-decoration-thickness: max(1px, 0.05em);
   --un-decoration-offset: max(2px, 0.15em);

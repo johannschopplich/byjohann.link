@@ -5,7 +5,7 @@ const isDev = process.env.NODE_ENV === 'development'
 export default defineNuxtConfig({
   modules: [
     '@byjohann/ui/nuxt',
-    '@nuxt/fonts',
+    '@nuxtjs/fontaine',
     '@unocss/nuxt',
     '@vueuse/nuxt',
     'nuxt-vitalizer',
@@ -48,18 +48,6 @@ export default defineNuxtConfig({
     preflight: isDev,
     // UnoCSS disables the `inlineStyles` Nuxt feature by default, which we want to use
     disableNuxtInlineStyle: false,
-  },
-
-  fonts: {
-    families: [
-      {
-        provider: 'local',
-        name: 'Cooper Hewitt',
-        weights: [400, 700],
-        styles: ['normal'],
-        global: true,
-      },
-    ],
   },
 
   nitro: {

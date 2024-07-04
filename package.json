@@ -23,7 +23,7 @@
     "@iconify-json/carbon": "^1.1.35",
     "@iconify-json/logos": "^1.1.43",
     "@julr/unocss-preset-forms": "^0.1.0",
-    "@nuxt/fonts": "^0.7.0",
+    "@nuxtjs/fontaine": "^0.4.3",
     "@sindresorhus/slugify": "^2.2.1",
     "@types/node": "^20.14.5",
     "@unocss/eslint-config": "^0.61.0",
