@@ -53,8 +53,11 @@ export default defineNuxtConfig({
   fonts: {
     families: [
       {
+        provider: 'local',
         name: 'Cooper Hewitt',
         weights: [400, 700],
+        styles: ['normal'],
+        global: true,
       },
     ],
   },
