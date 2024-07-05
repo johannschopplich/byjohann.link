@@ -6,6 +6,11 @@ import '~/assets/css/prose.css'
 
 // import favicon from '~/assets/favicon.svg?raw'
 
+// Log any uncaught errors to the console during development
+if (import.meta.dev) {
+  useNuxtApp().hooks.hook('vue:error', console.error)
+}
+
 const { siteUrl } = useRuntimeConfig().public
 const { languageCode } = getLocalePreference()
 
