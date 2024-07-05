@@ -18,9 +18,9 @@
     "prepare": "pnpm run uno:clean && nuxi prepare"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^2.21.1",
+    "@antfu/eslint-config": "^2.21.2",
     "@byjohann/ui": "^0.6.7",
-    "@iconify-json/carbon": "^1.1.35",
+    "@iconify-json/carbon": "^1.1.36",
     "@iconify-json/logos": "^1.1.43",
     "@julr/unocss-preset-forms": "^0.1.0",
     "@nuxtjs/fontaine": "^0.4.3",
@@ -29,12 +29,12 @@
     "@unocss/eslint-config": "^0.61.0",
     "@unocss/nuxt": "^0.61.0",
     "@vueuse/nuxt": "^10.11.0",
-    "eslint": "^9.5.0",
+    "eslint": "^9.6.0",
     "nuxt": "^3.12.3",
     "nuxt-kql": "^1.4.18",
     "nuxt-vitalizer": "^0.10.0",
     "prettier": "^3.3.2",
-    "typescript": "^5.4.5",
+    "typescript": "^5.5.3",
     "vue-tsc": "^2.0.26"
   }
 }
