@@ -45,7 +45,7 @@ export default defineConfig<Theme>({
       },
     },
     fontFamily: {
-      heading: 'Cooper Hewitt',
+      heading: 'Cooper Hewitt, Cooper Hewitt fallback',
     },
   },
   shortcuts: {
