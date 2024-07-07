@@ -28,10 +28,6 @@ export default defineNuxtConfig({
     },
   },
 
-  features: {
-    inlineStyles: true,
-  },
-
   future: {
     compatibilityVersion: 4,
   },
