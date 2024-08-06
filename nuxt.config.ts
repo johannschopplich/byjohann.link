@@ -3,7 +3,7 @@ import process from 'node:process'
 const isDev = process.env.NODE_ENV === 'development'
 
 export default defineNuxtConfig({
-  compatibilityDate: '2024-07-10',
+  compatibilityDate: '2024-04-03',
 
   modules: [
     '@byjohann/ui/nuxt',
