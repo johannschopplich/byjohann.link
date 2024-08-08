@@ -1,32 +1,26 @@
-<script lang="ts">
-/* eslint-disable import/first */
-export interface ResolvedKirbyImage {
+<script setup lang="ts">
+import type { KirbyBlock } from '#nuxt-kql'
+
+interface ResolvedKirbyImage {
   url: string
   width: number
   height: number
   srcset: string
   alt: string | null
 }
-</script>
-
-<script setup lang="ts">
-import type { KirbyBlock } from '#nuxt-kql'
 
 const props = defineProps<{
   block: KirbyBlock<
-    'resolved-image',
+    'image-resolved',
     {
       location: string
-      image: string[]
+      // File UUIDs are resolved server-side to the actual image data
+      // See: https://kirby.tools/docs/headless/field-methods
+      image: ResolvedKirbyImage[]
       src: string
       alt: string
       caption: string
       link: string
-      // File UUUIDs are resolved server-side to the actual image data
-      // See: https://github.com/johannschopplich/kirby-headless#toresolvedblocks
-      resolved: {
-        image: ResolvedKirbyImage[]
-      }
     }
   >
 }>()
@@ -35,7 +29,7 @@ const figure = ref<HTMLElement | undefined>()
 const { width } = useElementSize(figure)
 
 const image = computed<Partial<ResolvedKirbyImage>>(
-  () => props.block.content.resolved.image?.[0] ?? {},
+  () => props.block.content.image?.[0] ?? {},
 )
 </script>
 
