@@ -1,0 +1,7 @@
+name = "byjohann-link"
+pages_build_output_dir = "./dist"
+compatibility_date = "2024-08-23"
+
+[[kv_namespaces]]
+id = "f52afe050756444b8c2ac005f10afcb9"
+binding = "KV_BINDING"
