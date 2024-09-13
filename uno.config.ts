@@ -1,11 +1,11 @@
+import type { Theme } from '@unocss/preset-wind'
+import { presetForms } from '@julr/unocss-preset-forms'
 import {
   defineConfig,
   presetIcons,
   presetWind,
   transformerDirectives,
 } from 'unocss'
-import { presetForms } from '@julr/unocss-preset-forms'
-import type { Theme } from '@unocss/preset-wind'
 
 export default defineConfig<Theme>({
   theme: {

@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { TextShimmer } from '@byjohann/ui'
 import type { KirbyBlock } from '#nuxt-kql'
+import { TextShimmer } from '@byjohann/ui'
 
 const props = defineProps<{
   block: KirbyBlock<
