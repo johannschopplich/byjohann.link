@@ -1,28 +1,30 @@
 export default defineComponent({
-  props: {
-    tag: {
-      type: String,
-      default: 'div',
-    },
-  },
+  inheritAttrs: false,
 
-  setup(_, { slots }) {
-    const nuxtApp = useNuxtApp()
-    const error = useError()
+  setup(_, ctx) {
+    if (!ctx.slots.default) return
+
+    // Renders the default slot.
+    const renderSlot = () => {
+      return ctx.slots.default!()
+    }
 
     if (import.meta.server) {
+      const nuxtApp = useNuxtApp()
+
+      // We can early return without a promise in some cases.
+      if (nuxtApp.payload.error || nuxtApp._pageDependenciesRendered) {
+        return renderSlot
+      }
+
       // Defer rendering the component until the page component has rendered.
       return new Promise((resolve) => {
         const resolver = () => {
-          resolve(() => slots.default?.())
+          resolve(renderSlot)
         }
 
         // If Nuxt has an error, immediately render the component.
-        if (error.value) {
-          return resolver()
-        }
-
-        if (nuxtApp._pageDependenciesRendered) {
+        if (nuxtApp.payload.error || nuxtApp._pageDependenciesRendered) {
           return resolver()
         }
 
@@ -35,6 +37,6 @@ export default defineComponent({
       })
     }
 
-    return () => slots.default?.()
+    return renderSlot
   },
 })
