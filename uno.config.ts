@@ -8,6 +8,12 @@ import {
 } from 'unocss'
 
 export default defineConfig<Theme>({
+  cli: {
+    entry: {
+      patterns: ['**/*.vue'],
+      outFile: 'app/assets/uno.css',
+    },
+  },
   theme: {
     colors: {
       primary: {

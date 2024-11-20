@@ -9,7 +9,7 @@
     "generate": "pnpm run uno:build && nuxi generate",
     "preview": "nuxi preview",
     "uno:clean": "echo \"/**/\" > app/assets/uno.css",
-    "uno:build": "unocss \"**/*.vue\" --out-file app/assets/uno.css --minify",
+    "uno:build": "unocss --minify",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "format": "prettier \"**/*.{css,html,json,md,mjs,ts,vue,yml}\" --write",
