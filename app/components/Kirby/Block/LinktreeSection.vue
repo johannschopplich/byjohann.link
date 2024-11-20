@@ -19,7 +19,7 @@ const ICONS: Record<string, string> = {
   'https://www.instagram.com': 'i-carbon:logo-instagram',
   'https://www.linkedin.com': 'i-carbon:logo-linkedin',
   'https://github.com': 'i-carbon:logo-github',
-  'https://twitter.com': 'i-carbon:logo-twitter',
+  'https://x.com': 'i-carbon:logo-x',
   'https://www.youtube.com': 'i-carbon:logo-youtube',
   'mailto:': 'i-carbon:email',
   // Products
