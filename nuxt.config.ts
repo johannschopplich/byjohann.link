@@ -12,7 +12,7 @@ export default defineNuxtConfig({
     'nuxt-kql',
   ],
 
-  compatibilityDate: '2024-04-03',
+  compatibilityDate: '2024-09-19',
 
   runtimeConfig: {
     public: {
@@ -26,7 +26,7 @@ export default defineNuxtConfig({
       cache: true,
       storage: 'kql',
       swr: false,
-      maxAge: 60 * 60 * 24 * 30, // 30 days
+      maxAge: 60 * 60 * 24 * 7, // 7 days
     },
   },
 
