@@ -19,16 +19,6 @@ export default defineNuxtConfig({
     },
   },
 
-  kql: {
-    auth: 'bearer',
-    server: {
-      cache: true,
-      storage: 'kql',
-      swr: false,
-      maxAge: 60 * 60 * 24 * 7, // 7 days
-    },
-  },
-
   future: {
     compatibilityVersion: 4,
   },
@@ -43,6 +33,16 @@ export default defineNuxtConfig({
           item.css = []
         }
       }
+    },
+  },
+
+  kql: {
+    auth: 'bearer',
+    server: {
+      cache: true,
+      storage: 'kql',
+      swr: false,
+      maxAge: 60 * 60 * 24 * 7, // 7 days
     },
   },
 
