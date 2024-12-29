@@ -22,7 +22,6 @@
     "@byjohann/ui": "^0.10.8",
     "@iconify-json/carbon": "^1.2.5",
     "@iconify-json/logos": "^1.2.4",
-    "@julr/unocss-preset-forms": "^0.1.0",
     "@nuxtjs/fontaine": "^0.4.4",
     "@sindresorhus/slugify": "^2.2.1",
     "@types/node": "^22.10.2",

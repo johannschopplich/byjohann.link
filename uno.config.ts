@@ -1,5 +1,4 @@
 import type { Theme } from '@unocss/preset-wind'
-import { presetForms } from '@julr/unocss-preset-forms'
 import {
   defineConfig,
   presetIcons,
@@ -68,6 +67,6 @@ export default defineConfig<Theme>({
       },
     ],
   ],
-  presets: [presetForms(), presetWind(), presetIcons()],
+  presets: [presetWind(), presetIcons()],
   transformers: [transformerDirectives()],
 })
