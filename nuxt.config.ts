@@ -8,7 +8,6 @@ export default defineNuxtConfig({
     '@nuxtjs/fontaine',
     '@unocss/nuxt',
     '@vueuse/nuxt',
-    'nuxt-vitalizer',
     'nuxt-kql',
   ],
 
@@ -34,9 +33,17 @@ export default defineNuxtConfig({
     compatibilityVersion: 4,
   },
 
-  vitalizer: {
-    disablePrefetchLinks: true,
-    disableStylesheets: true,
+  hooks: {
+    'build:manifest': function (manifest) {
+      for (const item of Object.values(manifest)) {
+        item.dynamicImports = []
+        item.prefetch = false
+
+        if (item.resourceType === 'script') {
+          item.css = []
+        }
+      }
+    },
   },
 
   unocss: {

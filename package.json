@@ -2,7 +2,7 @@
   "name": "byjohann-link",
   "type": "module",
   "private": true,
-  "packageManager": "pnpm@9.14.1",
+  "packageManager": "pnpm@9.15.2",
   "scripts": {
     "dev": "pnpm run uno:clean && nuxi dev",
     "build": "pnpm run uno:build && nuxi build",
@@ -18,23 +18,22 @@
     "prepare": "pnpm run uno:clean && nuxi prepare"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^3.9.2",
-    "@byjohann/ui": "^0.10.7",
-    "@iconify-json/carbon": "^1.2.4",
-    "@iconify-json/logos": "^1.2.3",
+    "@antfu/eslint-config": "^3.12.1",
+    "@byjohann/ui": "^0.10.8",
+    "@iconify-json/carbon": "^1.2.5",
+    "@iconify-json/logos": "^1.2.4",
     "@julr/unocss-preset-forms": "^0.1.0",
     "@nuxtjs/fontaine": "^0.4.4",
     "@sindresorhus/slugify": "^2.2.1",
-    "@types/node": "^22.9.1",
-    "@unocss/eslint-config": "^0.64.1",
-    "@unocss/nuxt": "^0.64.1",
-    "@vueuse/nuxt": "^11.2.0",
-    "eslint": "^9.15.0",
-    "nuxt": "^3.14.1592",
+    "@types/node": "^22.10.2",
+    "@unocss/eslint-config": "^0.65.3",
+    "@unocss/nuxt": "^0.65.3",
+    "@vueuse/nuxt": "^12.2.0",
+    "eslint": "^9.17.0",
+    "nuxt": "^3.15.0",
     "nuxt-kql": "^1.5.4",
-    "nuxt-vitalizer": "^0.10.0",
-    "prettier": "^3.3.3",
-    "typescript": "^5.6.3",
-    "vue-tsc": "^2.1.10"
+    "prettier": "^3.4.2",
+    "typescript": "^5.7.2",
+    "vue-tsc": "^2.2.0"
   }
 }
