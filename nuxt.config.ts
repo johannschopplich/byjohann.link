@@ -31,11 +31,6 @@ export default defineNuxtConfig({
 
         // Disable prefetch for all items
         item.prefetch = false
-
-        // Remove render-blocking CSS
-        if (item.resourceType === 'script') {
-          item.css = []
-        }
       }
     },
   },
