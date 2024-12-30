@@ -23,6 +23,15 @@ export default defineNuxtConfig({
     compatibilityVersion: 4,
   },
 
+  features: {
+    // eslint-disable-next-line unused-imports/no-unused-vars
+    inlineStyles(id) {
+      // TODO: Why doesn't this work?
+      // return !!id && (id.includes('.vue') || /assets\/.+\.css$/.test(id))
+      return true
+    },
+  },
+
   hooks: {
     'build:manifest': (manifest) => {
       for (const item of Object.values(manifest)) {
@@ -31,6 +40,11 @@ export default defineNuxtConfig({
 
         // Disable prefetch links for all items
         item.prefetch = false
+
+        // Remove render-blocking CSS
+        if (item.resourceType === 'script') {
+          item.css = []
+        }
       }
     },
   },
