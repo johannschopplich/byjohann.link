@@ -179,9 +179,7 @@
  * Custom styles
  */
 .prose :where(h1, h2, h3, h4, h5, h6):not(:where(.not-prose, .not-prose *)) {
-  font-family:
-    Cooper Hewitt,
-    Cooper Hewitt fallback;
+  font-family: Cooper Hewitt;
   font-size: 1em;
 }
 

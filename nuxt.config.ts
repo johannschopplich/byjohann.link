@@ -24,12 +24,12 @@ export default defineNuxtConfig({
   },
 
   hooks: {
-    'build:manifest': function (manifest) {
+    'build:manifest': (manifest) => {
       for (const item of Object.values(manifest)) {
         // Disable prefetch links for dynamic imports
         item.dynamicImports = []
 
-        // Disable prefetch for all items
+        // Disable prefetch links for all items
         item.prefetch = false
       }
     },
