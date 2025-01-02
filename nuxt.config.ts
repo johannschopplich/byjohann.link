@@ -24,12 +24,8 @@ export default defineNuxtConfig({
   },
 
   features: {
-    // eslint-disable-next-line unused-imports/no-unused-vars
-    inlineStyles(id) {
-      // TODO: Why doesn't this work?
-      // return !!id && (id.includes('.vue') || /assets\/.+\.css$/.test(id))
-      return true
-    },
+    // Force inlining _all_ CSS
+    inlineStyles: true,
   },
 
   hooks: {
