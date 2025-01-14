@@ -50,7 +50,7 @@ export default defineConfig<Theme>({
       },
     },
     fontFamily: {
-      heading: 'Cooper Hewitt, "Cooper Hewitt fallback"',
+      heading: 'Cooper Hewitt, system-ui, sans-serif',
     },
   },
   shortcuts: {
