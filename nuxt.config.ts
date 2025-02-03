@@ -5,7 +5,7 @@ const isDev = process.env.NODE_ENV === 'development'
 export default defineNuxtConfig({
   modules: ['@byjohann/ui/nuxt', '@unocss/nuxt', '@vueuse/nuxt', 'nuxt-kql'],
 
-  compatibilityDate: '2024-09-19',
+  compatibilityDate: '2024-09-23',
 
   runtimeConfig: {
     public: {
