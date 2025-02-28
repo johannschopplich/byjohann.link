@@ -5,8 +5,9 @@
  */
 .prose {
   --un-prose-space-y: 1rem;
-  --un-prose-font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
-    'Liberation Mono', 'Courier New', monospace;
+  --un-prose-font-mono:
+    ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono',
+    'Courier New', monospace;
   --un-prose-borders: currentColor;
 }
 
