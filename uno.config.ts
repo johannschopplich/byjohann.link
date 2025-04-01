@@ -1,8 +1,8 @@
-import type { Theme } from '@unocss/preset-wind'
+import type { Theme } from '@unocss/preset-wind3'
 import {
   defineConfig,
   presetIcons,
-  presetWind,
+  presetWind3,
   transformerDirectives,
 } from 'unocss'
 
@@ -67,6 +67,6 @@ export default defineConfig<Theme>({
       },
     ],
   ],
-  presets: [presetWind(), presetIcons()],
+  presets: [presetWind3(), presetIcons()],
   transformers: [transformerDirectives()],
 })
