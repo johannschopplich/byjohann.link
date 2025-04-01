@@ -14,7 +14,7 @@ defineProps<{
     :class="[
       theme === 'secondary'
         ? 'bg-white text-black ring-1 ring-gray-300 ring-inset hover:bg-gray-50'
-        : 'bg-primary-300 text-black hover:bg-primary-200',
+        : 'bg-primary-300 text-black ring-1 ring-transparent ring-inset hover:bg-primary-200 hover:ring-primary-300',
     ]"
   >
     <slot />

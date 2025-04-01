@@ -189,14 +189,18 @@
 
 .prose :where(h1):not(:where(.not-prose, .not-prose *)) {
   font-size: 1.375em;
-  margin-bottom: 0;
 }
 
-.prose :where(a:hover):not(:where(.not-prose, .not-prose *)) {
-  /* --at-apply: 'decoration-primary-500'; */
+.prose :where(a:not([class])):not(:where(.not-prose, .not-prose *)) {
+  --at-apply: 'decoration-primary-500';
   text-decoration-line: underline;
+  text-decoration-style: solid;
   text-decoration-thickness: var(--un-decoration-thickness);
   text-underline-offset: var(--un-decoration-offset);
+}
+
+.prose :where(a:not([class]):hover):not(:where(.not-prose, .not-prose *)) {
+  text-decoration-color: var(--un-prose-links, currentColor);
 }
 
 .prose :where(.prose + .linktree-section):not(:where(.not-prose, .not-prose *)),
