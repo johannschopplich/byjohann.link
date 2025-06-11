@@ -5,7 +5,7 @@ const isDev = process.env.NODE_ENV === 'development'
 export default defineNuxtConfig({
   modules: ['@byjohann/ui/nuxt', '@unocss/nuxt', '@vueuse/nuxt', 'nuxt-kql'],
 
-  compatibilityDate: '2025-01-01',
+  compatibilityDate: '2025-06-01',
 
   runtimeConfig: {
     public: {
@@ -61,7 +61,7 @@ export default defineNuxtConfig({
   nitro: {
     storage: {
       kql:
-        process.env.NITRO_PRESET === 'cloudflare_pages'
+        process.env.NITRO_PRESET === 'cloudflare_module'
           ? {
               driver: 'cloudflareKVBinding',
               binding: 'KV_BINDING',

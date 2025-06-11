@@ -1,9 +1,18 @@
 name = "byjohann-link"
-pages_build_output_dir = "./dist"
+main = "./.output/server/index.mjs"
+workers_dev = false
 
-compatibility_date = "2025-01-01"
-compatibility_flags = ["nodejs_compat"]
+compatibility_date = "2025-06-01"
+compatibility_flags = ["nodejs_compat", "no_nodejs_compat_v2"]
+routes = [
+  { pattern = "byjohann.link", custom_domain = true }
+]
 
 kv_namespaces = [
   { binding = "KV_BINDING", id = "f52afe050756444b8c2ac005f10afcb9" }
 ]
+
+[assets]
+directory = "./.output/public"
+not_found_handling = "single-page-application"
+binding = "ASSETS"
