@@ -1,9 +1,8 @@
 name = "byjohann-link"
 main = "./.output/server/index.mjs"
-workers_dev = false
-
 compatibility_date = "2025-06-01"
 compatibility_flags = ["nodejs_compat", "no_nodejs_compat_v2"]
+
 routes = [
   { pattern = "byjohann.link", custom_domain = true }
 ]
