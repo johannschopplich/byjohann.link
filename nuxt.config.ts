@@ -5,16 +5,12 @@ const isDev = process.env.NODE_ENV === 'development'
 export default defineNuxtConfig({
   modules: ['@byjohann/ui/nuxt', '@unocss/nuxt', '@vueuse/nuxt', 'nuxt-kql'],
 
-  compatibilityDate: '2025-06-01',
+  compatibilityDate: '2025-08-01',
 
   runtimeConfig: {
     public: {
       siteUrl: 'https://byjohann.link',
     },
-  },
-
-  future: {
-    compatibilityVersion: 4,
   },
 
   features: {
