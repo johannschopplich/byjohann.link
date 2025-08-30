@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import type { KirbyBlock } from '#nuxt-kql'
-import { TextShimmer } from '@byjohann/ui'
 
 const props = defineProps<{
   block: KirbyBlock<
@@ -13,6 +12,8 @@ const props = defineProps<{
     }
   >
 }>()
+
+const TextShimmer = resolveComponent('ElementTextShimmer')
 
 const ICONS: Record<string, string> = {
   // Social

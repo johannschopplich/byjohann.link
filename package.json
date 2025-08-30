@@ -4,10 +4,10 @@
   "private": true,
   "packageManager": "pnpm@10.15.0",
   "scripts": {
-    "dev": "pnpm run uno:clean && nuxi dev",
-    "build": "pnpm run uno:build && nuxi build",
-    "generate": "pnpm run uno:build && nuxi generate",
-    "preview": "nuxi preview",
+    "dev": "pnpm run uno:clean && nuxt dev",
+    "build": "pnpm run uno:build && nuxt build",
+    "generate": "pnpm run uno:build && nuxt generate",
+    "preview": "nuxt preview",
     "uno:clean": "echo \"/**/\" > app/assets/uno.css",
     "uno:build": "unocss --minify",
     "lint": "eslint .",
@@ -15,11 +15,10 @@
     "format": "prettier \"**/*.{css,html,json,md,mjs,ts,vue,yml}\" --write",
     "format:check": "prettier \"**/*.{css,html,json,md,mjs,ts,vue,yml}\" --check",
     "test:types": "vue-tsc -b --noEmit",
-    "prepare": "pnpm run uno:clean && nuxi prepare"
+    "prepare": "pnpm run uno:clean && nuxt prepare"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^5.2.1",
-    "@byjohann/ui": "^0.12.2",
     "@iconify-json/carbon": "^1.2.13",
     "@iconify-json/logos": "^1.2.9",
     "@sindresorhus/slugify": "^2.2.1",
