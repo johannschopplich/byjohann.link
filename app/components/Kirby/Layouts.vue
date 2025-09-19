@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { KirbyLayout } from '#nuxt-kql'
+import type { KirbyLayout } from 'kirby-types'
 
 defineProps<{
   layouts: KirbyLayout[]

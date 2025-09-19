@@ -2,7 +2,7 @@ import type {
   KirbyBlock,
   KirbyQueryResponse,
   KirbyQuerySchema,
-} from '#nuxt-kql'
+} from 'kirby-types'
 
 export interface KirbyLinktreeData {
   id: string
