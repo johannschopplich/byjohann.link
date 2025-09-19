@@ -3,7 +3,7 @@ import process from 'node:process'
 const isDev = process.env.NODE_ENV === 'development'
 
 export default defineNuxtConfig({
-  modules: ['@unocss/nuxt', '@vueuse/nuxt', 'nuxt-kql'],
+  modules: ['@unocss/nuxt', '@vueuse/nuxt', 'nuxt-kirby'],
 
   compatibilityDate: '2025-08-01',
 
@@ -35,7 +35,7 @@ export default defineNuxtConfig({
     },
   },
 
-  kql: {
+  kirby: {
     auth: 'bearer',
     server: {
       cache: !isDev,
