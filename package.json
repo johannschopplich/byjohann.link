@@ -2,7 +2,7 @@
   "name": "byjohann-link",
   "type": "module",
   "private": true,
-  "packageManager": "pnpm@10.17.0",
+  "packageManager": "pnpm@10.24.0",
   "scripts": {
     "dev": "pnpm run uno:clean && nuxt dev",
     "build": "pnpm run uno:build && nuxt build",
@@ -18,20 +18,20 @@
     "prepare": "pnpm run uno:clean && nuxt prepare"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^5.3.0",
-    "@iconify-json/carbon": "^1.2.13",
-    "@iconify-json/logos": "^1.2.9",
+    "@antfu/eslint-config": "^6.2.0",
+    "@iconify-json/carbon": "^1.2.14",
+    "@iconify-json/logos": "^1.2.10",
     "@sindresorhus/slugify": "^3.0.0",
-    "@types/node": "^24.5.2",
-    "@unocss/eslint-config": "^66.5.1",
-    "@unocss/nuxt": "^66.5.1",
-    "@vueuse/nuxt": "^13.9.0",
-    "eslint": "^9.35.0",
-    "nuxt": "^4.1.2",
-    "nuxt-kirby": "^3.0.1",
-    "prettier": "^3.6.2",
-    "typescript": "^5.9.2",
-    "vue-tsc": "^3.0.7"
+    "@types/node": "^24.10.1",
+    "@unocss/eslint-config": "^66.5.9",
+    "@unocss/nuxt": "^66.5.9",
+    "@vueuse/nuxt": "^14.1.0",
+    "eslint": "^9.39.1",
+    "nuxt": "^4.2.1",
+    "nuxt-kirby": "^3.0.2",
+    "prettier": "^3.7.1",
+    "typescript": "^5.9.3",
+    "vue-tsc": "^3.1.5"
   },
   "pnpm": {
     "onlyBuiltDependencies": [
