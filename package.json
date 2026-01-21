@@ -2,7 +2,7 @@
   "name": "byjohann-link",
   "type": "module",
   "private": true,
-  "packageManager": "pnpm@10.24.0",
+  "packageManager": "pnpm@10.28.1",
   "scripts": {
     "dev": "pnpm run uno:clean && nuxt dev",
     "build": "pnpm run uno:build && nuxt build",
@@ -18,20 +18,20 @@
     "prepare": "pnpm run uno:clean && nuxt prepare"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^6.2.0",
-    "@iconify-json/carbon": "^1.2.14",
+    "@antfu/eslint-config": "^7.2.0",
+    "@iconify-json/carbon": "^1.2.18",
     "@iconify-json/logos": "^1.2.10",
     "@sindresorhus/slugify": "^3.0.0",
-    "@types/node": "^24.10.1",
-    "@unocss/eslint-config": "^66.5.9",
-    "@unocss/nuxt": "^66.5.9",
+    "@types/node": "^24.10.9",
+    "@unocss/eslint-config": "^66.6.0",
+    "@unocss/nuxt": "^66.6.0",
     "@vueuse/nuxt": "^14.1.0",
-    "eslint": "^9.39.1",
-    "nuxt": "^4.2.1",
-    "nuxt-kirby": "^3.0.2",
-    "prettier": "^3.7.1",
+    "eslint": "^9.39.2",
+    "nuxt": "^4.2.2",
+    "nuxt-kirby": "^3.0.3",
+    "prettier": "^3.8.0",
     "typescript": "^5.9.3",
-    "vue-tsc": "^3.1.5"
+    "vue-tsc": "^3.2.2"
   },
   "pnpm": {
     "onlyBuiltDependencies": [
