@@ -26,24 +26,28 @@ export function setPage<T extends Record<string, any>>(page: T) {
     },
   })
 
-  useServerHead({
-    link: [{ rel: 'canonical', href: url }],
-  })
+  if (import.meta.server) {
+    useHead({
+      link: [{ rel: 'canonical', href: url }],
+    })
+  }
 
   useSeoMeta({
     title,
   })
 
-  useServerSeoMeta({
-    description,
-    ogTitle: title,
-    ogDescription: description,
-    ogUrl: url,
-    ogType: 'website',
-    ...(image && { ogImage: image }),
-    twitterTitle: title,
-    twitterDescription: description,
-    twitterCard: image ? 'summary_large_image' : 'summary',
-    ...(image && { twitterImage: image }),
-  })
+  if (import.meta.server) {
+    useSeoMeta({
+      description,
+      ogTitle: title,
+      ogDescription: description,
+      ogUrl: url,
+      ogType: 'website',
+      ...(image && { ogImage: image }),
+      twitterTitle: title,
+      twitterDescription: description,
+      twitterCard: image ? 'summary_large_image' : 'summary',
+      ...(image && { twitterImage: image }),
+    })
+  }
 }

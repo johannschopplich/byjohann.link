@@ -1,8 +1,8 @@
-import type { Theme } from '@unocss/preset-wind3'
+import type { Theme } from '@unocss/preset-wind4'
 import {
   defineConfig,
   presetIcons,
-  presetWind3,
+  presetWind4,
   transformerDirectives,
 } from 'unocss'
 
@@ -49,24 +49,13 @@ export default defineConfig<Theme>({
         },
       },
     },
-    fontFamily: {
+    font: {
       heading: 'Cooper Hewitt, system-ui, sans-serif',
     },
   },
   shortcuts: {
     'max-w-content': 'mx-auto w-[min(100%-2rem,640px)]',
   },
-  rules: [
-    [
-      'text-underline',
-      {
-        'text-decoration-line': 'underline',
-        'text-decoration-color': 'currentColor',
-        'text-decoration-thickness': 'var(--un-decoration-thickness)',
-        'text-underline-offset': 'var(--un-decoration-offset)',
-      },
-    ],
-  ],
-  presets: [presetWind3(), presetIcons()],
+  presets: [presetWind4(), presetIcons()],
   transformers: [transformerDirectives()],
 })

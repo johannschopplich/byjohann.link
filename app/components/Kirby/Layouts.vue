@@ -18,7 +18,7 @@ function span(width: `${string}/${string}`, columns = 12) {
       v-for="layout in layouts"
       :id="layout.id"
       :key="layout.id"
-      class="grid gap-y-4 md:grid-cols-12 md:gap-16"
+      class="gap-y-4 grid md:gap-16 md:grid-cols-12"
     >
       <div
         v-for="(column, index) in layout.columns"

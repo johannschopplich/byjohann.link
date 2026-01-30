@@ -1,4 +1,5 @@
 import process from 'node:process'
+import postcssNesting from 'postcss-nesting'
 
 const isDev = process.env.NODE_ENV === 'development'
 
@@ -32,6 +33,14 @@ export default defineNuxtConfig({
           item.css = []
         }
       }
+    },
+  },
+
+  vite: {
+    css: {
+      postcss: {
+        plugins: [postcssNesting()],
+      },
     },
   },
 

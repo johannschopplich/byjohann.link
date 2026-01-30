@@ -3,7 +3,7 @@ import type { NuxtError } from '#app'
 
 defineProps<{
   data?: any
-  error?: NuxtError<any> | null
+  error?: NuxtError | null
 }>()
 </script>
 
@@ -12,7 +12,7 @@ defineProps<{
     <summary class="cursor-pointer">
       {{ data ? 'Page data' : 'Error fetching page data' }}
     </summary>
-    <pre class="whitespace-pre-wrap text-[0.875em]">{{
+    <pre class="text-[0.875em] whitespace-pre-wrap">{{
       JSON.stringify(data, undefined, 2)
     }}</pre>
   </details>
