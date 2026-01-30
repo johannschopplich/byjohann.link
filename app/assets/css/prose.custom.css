@@ -1,0 +1,37 @@
+.prose {
+  & :where(h1, h2, h3, h4, h5, h6):not(:where(.not-prose, .not-prose *)) {
+    font-family:
+      Cooper Hewitt,
+      system-ui,
+      sans-serif;
+    font-size: 1em;
+  }
+
+  & :where(h1):not(:where(.not-prose, .not-prose *)) {
+    font-size: 1.375em;
+  }
+
+  & :where(a:not([class])):not(:where(.not-prose, .not-prose *)) {
+    --at-apply: 'decoration-primary-500';
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-decoration-thickness: var(--un-decoration-thickness);
+    text-underline-offset: var(--un-decoration-offset);
+  }
+
+  & :where(a:not([class]):hover):not(:where(.not-prose, .not-prose *)) {
+    text-decoration-color: var(--un-prose-links, currentcolor);
+  }
+
+  & :where(.prose + .linktree-section):not(:where(.not-prose, .not-prose *)),
+  &
+    :where(
+      .linktree-section + h2,
+      .linktree-section + h3,
+      .linktree-section + h4,
+      .linktree-section + h5,
+      .linktree-section + h6
+    ):not(:where(.not-prose, .not-prose *)) {
+    margin-top: calc(4 * var(--un-prose-space-y));
+  }
+}

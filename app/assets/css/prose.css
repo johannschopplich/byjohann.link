@@ -1,13 +1,11 @@
 /* Adapted from https://github.com/unocss/unocss/tree/main/packages-presets/preset-typography */
 .prose {
-  --un-prose-space-y: 1rem;
   --un-prose-font-mono:
     ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono',
     'Courier New', monospace;
-  --un-prose-borders: currentcolor;
 
   & > :where(*:not(:last-child)):not(:where(.not-prose, .not-prose *)) {
-    margin-bottom: calc(1 * var(--un-prose-space-y));
+    margin-bottom: calc(1 * var(--un-prose-space-y, 1rem));
   }
 
   &
@@ -19,7 +17,7 @@
       h5:not(:first-child),
       h6:not(:first-child)
     ):not(:where(.not-prose, .not-prose *)) {
-    margin-top: calc(2 * var(--un-prose-space-y));
+    margin-top: calc(2 * var(--un-prose-space-y, 1rem));
   }
 
   & :where(h1, h2, h3, h4, h5, h6):not(:where(.not-prose, .not-prose *)) {
@@ -37,12 +35,12 @@
   }
 
   & :where(p, ul, ol, pre):not(:where(.not-prose, .not-prose *)) {
-    line-height: 1.5;
+    line-height: var(--un-prose-line-height, 1.5);
   }
 
   & :where(blockquote):not(:where(.not-prose, .not-prose *)) {
     font-style: italic;
-    border-left: 0.25em solid var(--un-prose-borders);
+    border-left: 0.25em solid var(--un-prose-borders, currentcolor);
     padding-left: 1em;
   }
 
@@ -128,7 +126,7 @@
 
   & :where(hr):not(:where(.not-prose, .not-prose *)) {
     height: 0;
-    margin: calc(2 * var(--un-prose-space-y)) 0;
+    margin: calc(2 * var(--un-prose-space-y, 1rem)) 0;
     border: 1px solid var(--un-prose-hr, currentcolor);
   }
 
@@ -144,7 +142,7 @@
   }
 
   & :where(td, th):not(:where(.not-prose, .not-prose *)) {
-    border: 1px solid var(--un-prose-borders);
+    border: 1px solid var(--un-prose-borders, currentcolor);
     padding: 0.625em 1em;
   }
 
@@ -169,44 +167,5 @@
   & :where(summary):not(:where(.not-prose, .not-prose *)) {
     cursor: pointer;
     font-weight: 600;
-  }
-
-  /*
-   * Custom styles
-   */
-  & :where(h1, h2, h3, h4, h5, h6):not(:where(.not-prose, .not-prose *)) {
-    font-family:
-      Cooper Hewitt,
-      system-ui,
-      sans-serif;
-    font-size: 1em;
-  }
-
-  & :where(h1):not(:where(.not-prose, .not-prose *)) {
-    font-size: 1.375em;
-  }
-
-  & :where(a:not([class])):not(:where(.not-prose, .not-prose *)) {
-    --at-apply: 'decoration-primary-500';
-    text-decoration-line: underline;
-    text-decoration-style: solid;
-    text-decoration-thickness: var(--un-decoration-thickness);
-    text-underline-offset: var(--un-decoration-offset);
-  }
-
-  & :where(a:not([class]):hover):not(:where(.not-prose, .not-prose *)) {
-    text-decoration-color: var(--un-prose-links, currentcolor);
-  }
-
-  & :where(.prose + .linktree-section):not(:where(.not-prose, .not-prose *)),
-  &
-    :where(
-      .linktree-section + h2,
-      .linktree-section + h3,
-      .linktree-section + h4,
-      .linktree-section + h5,
-      .linktree-section + h6
-    ):not(:where(.not-prose, .not-prose *)) {
-    margin-top: calc(4 * var(--un-prose-space-y));
   }
 }

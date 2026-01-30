@@ -3,6 +3,7 @@ import '@unocss/reset/tailwind.css'
 import '~/assets/uno.css'
 import '~/assets/css/main.css'
 import '~/assets/css/prose.css'
+import '~/assets/css/prose.custom.css'
 
 // import favicon from '~/assets/favicon.svg?raw'
 
