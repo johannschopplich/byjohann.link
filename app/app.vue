@@ -10,7 +10,7 @@ if (import.meta.dev) {
 }
 
 const { theme } = useRuntimeConfig().public
-const { languageCode } = getLocalePreference()
+const { languageCode } = useLocalePreference()
 
 function generateColorVars(
   colors: Record<string, unknown>,
@@ -41,7 +41,7 @@ useSeoMeta({
 if (import.meta.server) {
   useHead({
     htmlAttrs: {
-      lang: languageCode === 'de' ? 'de' : 'en',
+      lang: languageCode.value === 'de' ? 'de' : 'en',
     },
     link: [
       {

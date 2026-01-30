@@ -50,7 +50,7 @@ const linksWithIcons = props.block.content.links.map((item) => {
           class="flex items-center inset-y-0 left-3 absolute isolate"
         >
           <span
-            class="rounded-md bg-$un-color-background inset-[0.25em] absolute"
+            class="rounded-lg bg-$un-color-background inset-x-0 inset-y-[0.25em] absolute"
           />
           <span class="size-[1.75em] z-1" :class="[item.icon]" />
         </span>

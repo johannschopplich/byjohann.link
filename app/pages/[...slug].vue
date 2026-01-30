@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import { linktreeQuery } from '~/queries'
 
-const { languageCode } = getLocalePreference()
+const { languageCode } = useLocalePreference()
 const { data, error } = await useKql(linktreeQuery, {
-  language: languageCode === 'de' ? 'de' : 'en',
+  language: languageCode.value === 'de' ? 'de' : 'en',
 })
 
 if (!data.value?.result) {
