@@ -15,7 +15,6 @@ export interface KirbyLinktreeData {
     width: number
     height: number
     alt: string
-    thumbhash: string
   }
   thumbnail?: {
     url: string
@@ -34,7 +33,7 @@ export const linktreeQuery: KirbyQuerySchema = {
     blocks: 'page.text.toResolvedBlocks',
     profileImage: {
       query: 'page.files.find("profile-image.png")',
-      select: ['srcset', 'width', 'height', 'alt', 'thumbhash'],
+      select: ['srcset', 'width', 'height', 'alt'],
     },
     thumbnail: {
       query: 'page.thumbnail.or(site.thumbnail).toFile?.resize(1200)',
