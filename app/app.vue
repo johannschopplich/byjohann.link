@@ -65,7 +65,7 @@ if (import.meta.server) {
 
 <template>
   <div
-    class="mx-4 border-x border-secondary/75 hidden inset-0 fixed z-[-1] lg:mx-8 sm:mx-6 lg:block"
+    class="mx-4 border-x border-secondary/75 hidden inset-0 fixed z-[-1] lg:mx-8 sm:mx-6 sm:block"
   />
 
   <PageDependency>
@@ -75,8 +75,4 @@ if (import.meta.server) {
   <main id="main" class="max-w-content mb-16">
     <NuxtPage />
   </main>
-
-  <DevOnly>
-    <AppColorModeSwitcher />
-  </DevOnly>
 </template>

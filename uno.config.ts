@@ -90,7 +90,7 @@ ${selector} {
     ],
   ],
   shortcuts: {
-    'max-w-content': 'mx-auto w-[min(100%-2rem,640px)]',
+    'max-w-content': 'mx-auto w-[min(100%-4rem,640px)]',
   },
   presets: [presetWind4(), presetIcons()],
   transformers: [transformerDirectives()],

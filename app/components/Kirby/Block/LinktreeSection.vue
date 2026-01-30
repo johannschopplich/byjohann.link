@@ -47,10 +47,11 @@ const linksWithIcons = props.block.content.links.map((item) => {
       >
         <span
           v-if="item.icon"
-          class="flex items-center inset-y-0 left-3 absolute isolate"
+          aria-hidden="true"
+          class="flex items-center inset-y-0 left-3 justify-center absolute isolate"
         >
           <span
-            class="rounded-lg bg-$un-color-background inset-x-0 inset-y-[0.25em] absolute"
+            class="rounded-full bg-$un-color-background size-[1.75em] absolute"
           />
           <span class="size-[1.75em] z-1" :class="[item.icon]" />
         </span>
