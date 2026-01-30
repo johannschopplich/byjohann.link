@@ -26,7 +26,7 @@ const blockComponents: Record<string, Component> = {
   'linktree-section': LazyKirbyBlockLinktreeSection,
 }
 
-const content = ref<HTMLElement | undefined>()
+const content = useTemplateRef('content')
 useInternalLinks(content)
 </script>
 

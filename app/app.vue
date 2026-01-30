@@ -5,30 +5,45 @@ import '~/assets/css/main.css'
 import '~/assets/css/prose.css'
 import '~/assets/css/prose.custom.css'
 
-// import favicon from '~/assets/favicon.svg?raw'
-
-// Log any uncaught errors to the console during development
 if (import.meta.dev) {
   useNuxtApp().hooks.hook('vue:error', console.error)
 }
 
+const { theme } = useRuntimeConfig().public
 const { languageCode } = getLocalePreference()
 
+function generateColorVars(
+  colors: Record<string, unknown>,
+  prefix = '--un-color',
+): string {
+  const lines: string[] = []
+  for (const [key, value] of Object.entries(colors)) {
+    const name = `${prefix}-${key}`
+    if (typeof value === 'string') {
+      lines.push(`${name}: ${value};`)
+    } else if (value && typeof value === 'object') {
+      const obj = value as Record<string, unknown>
+      if (typeof obj.DEFAULT === 'string') {
+        lines.push(`${name}: ${obj.DEFAULT};`)
+      }
+      lines.push(generateColorVars(obj, name))
+    }
+  }
+  return lines.filter((line) => !line.includes('-DEFAULT:')).join('\n')
+}
+
+const colorMode = useColorMode()
+
 useSeoMeta({
-  themeColor: '#fefaf7',
+  themeColor: () => (colorMode.value === 'dark' ? '#1c1917' : 'white'),
 })
 
 if (import.meta.server) {
   useHead({
     htmlAttrs: {
       lang: languageCode === 'de' ? 'de' : 'en',
-      class: 'bg-off-white',
     },
     link: [
-      // {
-      //   rel: 'icon',
-      //   href: `data:image/svg+xml,${favicon.replace('"', '%22')}`,
-      // },
       {
         rel: 'icon',
         href: '/favicon.ico',
@@ -39,16 +54,29 @@ if (import.meta.server) {
         href: '/apple-touch-icon.png',
       },
     ],
+    style: [
+      {
+        innerHTML: `:root {\n${generateColorVars(theme.colors)}\n}`,
+      },
+    ],
   })
 }
 </script>
 
 <template>
+  <div
+    class="mx-4 border-x border-secondary/75 hidden inset-0 fixed z-[-1] lg:mx-8 sm:mx-6 lg:block"
+  />
+
   <PageDependency>
-    <AppHeader />
+    <AppHeader class="mb-8" />
   </PageDependency>
 
   <main id="main" class="max-w-content mb-16">
     <NuxtPage />
   </main>
+
+  <DevOnly>
+    <AppColorModeSwitcher />
+  </DevOnly>
 </template>

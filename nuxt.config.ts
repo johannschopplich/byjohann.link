@@ -1,16 +1,22 @@
 import process from 'node:process'
 import postcssNesting from 'postcss-nesting'
+import UnoCSSConfig from './uno.config'
 
 const isDev = process.env.NODE_ENV === 'development'
 
 export default defineNuxtConfig({
-  modules: ['@unocss/nuxt', '@vueuse/nuxt', 'nuxt-kirby'],
+  modules: ['@unocss/nuxt', '@vueuse/nuxt', 'nuxt-kirby', '@nuxtjs/color-mode'],
+
+  colorMode: {
+    classSuffix: '',
+  },
 
   compatibilityDate: '2025-08-01',
 
   runtimeConfig: {
     public: {
       siteUrl: 'https://byjohann.link',
+      theme: UnoCSSConfig.theme,
     },
   },
 

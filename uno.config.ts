@@ -3,6 +3,7 @@ import {
   defineConfig,
   presetIcons,
   presetWind4,
+  toEscapedSelector,
   transformerDirectives,
 } from 'unocss'
 
@@ -13,6 +14,13 @@ export default defineConfig<Theme>({
       outFile: 'app/assets/uno.css',
     },
   },
+  safelist: [
+    'font-heading',
+    // Force stone color CSS variables to be generated
+    ...[50, 100, 200, 300, 400, 500, 600, 700, 800, 900, 950].map(
+      (n) => `text-stone-${n}`,
+    ),
+  ],
   theme: {
     colors: {
       primary: {
@@ -30,29 +38,57 @@ export default defineConfig<Theme>({
         950: 'oklch(21.0% 0.028 125.2)', // #151B0C
       },
       secondary: {
-        DEFAULT: '#FF9320',
-        50: '#FFECD8',
-        100: '#FFE2C3',
-        200: '#FFCE9A',
-        300: '#FFBB72',
-        400: '#FFA749',
-        500: '#FF9320',
-        600: '#E77700',
-        700: '#AF5A00',
-        800: '#773D00',
-        900: '#3F2000',
-        950: '#231200',
-      },
-      off: {
-        white: {
-          DEFAULT: '#fefaf7',
-        },
+        DEFAULT: 'oklch(64.8% 0.150 40)', // #d96a41
+        50: 'oklch(97.0% 0.014 40)', // #fef2ee
+        100: 'oklch(94.0% 0.028 40)', // #fde5dd
+        200: 'oklch(89.0% 0.050 40)', // #f9d0c2
+        300: 'oklch(83.0% 0.082 40)', // #f7b69f
+        400: 'oklch(74.0% 0.122 40)', // #ec8f6e
+        500: 'oklch(64.8% 0.150 40)', // #d96a41
+        600: 'oklch(55.0% 0.136 40)', // #b1512d
+        700: 'oklch(46.0% 0.122 40)', // #8e3b1b
+        800: 'oklch(38.0% 0.108 40)', // #70290c
+        900: 'oklch(31.0% 0.095 40)', // #561a02
+        950: 'oklch(21.0% 0.076 40)', // #330600
       },
     },
     font: {
       heading: 'Cooper Hewitt, system-ui, sans-serif',
     },
+    container: {
+      prose: '60ch',
+    },
   },
+  rules: [
+    [
+      /^halftone-bg$/,
+      ([,], { rawSelector }) => {
+        const selector = toEscapedSelector(rawSelector)
+        const from = 'var(--un-dithered-from, var(--un-color-text))'
+        const to = 'var(--un-dithered-to, var(--un-color-background))'
+
+        return `
+${selector} {
+  text-shadow:
+    -2px -2px 0 ${to}, 0 -2px 0 ${to},
+    2px -2px 0 ${to}, -2px 0 0 ${to},
+    2px 0 0 ${to}, -2px 2px 0 ${to},
+    0 2px 0 ${to}, 2px 2px 0 ${to};
+  background-image: radial-gradient(${from} 20%, transparent 20%), radial-gradient(${from} 20%, transparent 20%);
+  background-position: 0px 0px, 2.5px 2.5px;
+  background-size: 5px 5px;
+}
+
+@media (min-resolution: 2dppx) {
+  ${selector} {
+    background-position: 0px 0px, 2px 2px;
+    background-size: 4px 4px;
+  }
+}
+`
+      },
+    ],
+  ],
   shortcuts: {
     'max-w-content': 'mx-auto w-[min(100%-2rem,640px)]',
   },

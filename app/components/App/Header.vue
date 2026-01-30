@@ -5,20 +5,24 @@ const page = usePage<KirbyLinktreeData>()
 </script>
 
 <template>
-  <div class="mx-auto max-w-screen-sm">
-    <span
-      class="rounded-full w-full max-w-screen-sm aspect-square bottom-[calc(100%-200px)] fixed from-secondary-200 to-off-white bg-gradient-to-b blur-3xl -z-50"
+  <header class="flex flex-col items-center">
+    <div
+      class="h-22 w-full halftone-bg dark:[--un-dithered-from:var(--colors-stone-400)]"
     />
-  </div>
 
-  <header class="mb-8 mt-16">
-    <img
-      :srcset="page.profileImage.srcset"
-      :width="page.profileImage.width"
-      :height="page.profileImage.height"
-      :alt="page.profileImage.alt"
-      sizes="112px"
-      class="mx-auto rounded-full w-28 ring-1 ring-secondary-100 ring-offset-2 ring-offset-off-white"
-    />
+    <div class="relative">
+      <div
+        class="rounded-full bg-secondary/75 size-18 left-1/2 top-1/2 absolute z-[-1] blur-3xl dark:bg-secondary/50 -translate-x-1/2 -translate-y-1/2"
+      />
+
+      <img
+        :srcset="page.profileImage.srcset"
+        :width="page.profileImage.width"
+        :height="page.profileImage.height"
+        :alt="page.profileImage.alt"
+        sizes="112px"
+        class="rounded-full w-28 ring-2 ring-$un-color-background -mt-14"
+      />
+    </div>
   </header>
 </template>

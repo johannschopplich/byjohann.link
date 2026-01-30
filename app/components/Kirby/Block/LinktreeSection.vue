@@ -13,8 +13,6 @@ const props = defineProps<{
   >
 }>()
 
-const TextShimmer = resolveComponent('ElementTextShimmer')
-
 const ICONS: Record<string, string> = {
   // Social
   'https://www.instagram.com': 'i-carbon:logo-instagram',
@@ -24,7 +22,7 @@ const ICONS: Record<string, string> = {
   'https://www.youtube.com': 'i-carbon:logo-youtube',
   'mailto:': 'i-carbon:email',
   // Products
-  'https://kirby': 'i-logos:kirby-icon',
+  'https://kirby': 'i-simple-icons:kirby',
 }
 
 const linksWithIcons = props.block.content.links.map((item) => {
@@ -43,19 +41,21 @@ const linksWithIcons = props.block.content.links.map((item) => {
     style="--gap: calc(2 * var(--un-prose-space-y))"
   >
     <div v-for="(item, index) in linksWithIcons" :key="index">
-      <ElementButton :href="item.link" class="relative w-full">
+      <a
+        :href="item.link"
+        class="py-1.5 decoration-[length:var(--un-decoration-thickness)] underline-offset-[var(--un-decoration-offset)] inline-flex w-full items-center justify-center relative halftone-bg -my-0.5 focus-visible:outline-2 focus-visible:outline-current focus-visible:outline-offset-2 focus-visible:outline hover:underline hover:decoration-secondary-500 active:translate-y-[1px] dark:[--un-dithered-from:var(--colors-stone-400)] hover:[--un-dithered-from:var(--un-color-secondary-600)] dark:hover:decoration-secondary-400 dark:hover:[--un-dithered-from:var(--un-color-secondary-400)]"
+      >
         <span
           v-if="item.icon"
-          class="absolute inset-y-0 left-3 flex items-center"
+          class="flex items-center inset-y-0 left-3 absolute isolate"
         >
-          <span class="h-[1.75em] w-[1.75em]" :class="[item.icon]" />
+          <span
+            class="rounded-md bg-$un-color-background inset-[0.25em] absolute"
+          />
+          <span class="size-[1.75em] z-1" :class="[item.icon]" />
         </span>
-        <component
-          :is="item.title.toLowerCase().includes('blog') ? TextShimmer : 'span'"
-        >
-          {{ item.title }}
-        </component>
-      </ElementButton>
+        <span>{{ item.title }}</span>
+      </a>
     </div>
   </div>
 </template>
