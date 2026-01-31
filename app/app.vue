@@ -9,29 +9,8 @@ if (import.meta.dev) {
   useNuxtApp().hooks.hook('vue:error', console.error)
 }
 
-const { theme } = useRuntimeConfig().public
 const { languageCode } = useLocalePreference()
-
-function generateColorVars(
-  colors: Record<string, unknown>,
-  prefix = '--un-color',
-): string {
-  const lines: string[] = []
-  for (const [key, value] of Object.entries(colors)) {
-    const name = `${prefix}-${key}`
-    if (typeof value === 'string') {
-      lines.push(`${name}: ${value};`)
-    } else if (value && typeof value === 'object') {
-      const obj = value as Record<string, unknown>
-      if (typeof obj.DEFAULT === 'string') {
-        lines.push(`${name}: ${obj.DEFAULT};`)
-      }
-      lines.push(generateColorVars(obj, name))
-    }
-  }
-  return lines.filter((line) => !line.includes('-DEFAULT:')).join('\n')
-}
-
+const { theme, generateColorVars } = useTheme()
 const colorMode = useColorMode()
 
 useSeoMeta({
