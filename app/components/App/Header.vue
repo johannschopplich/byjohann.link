@@ -18,7 +18,7 @@ const page = usePage<KirbyLinktreeData>()
 
     <div class="relative">
       <div
-        class="rounded-full bg-secondary/75 size-18 left-1/2 top-1/2 absolute z-[-1] blur-3xl dark:bg-secondary/50 -translate-x-1/2 -translate-y-1/2"
+        class="rounded-full bg-secondary size-18 left-1/2 top-1/2 absolute z-[-1] blur-3xl dark:bg-secondary/50 -translate-x-1/2 -translate-y-1/2"
       />
 
       <img
