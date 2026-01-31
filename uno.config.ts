@@ -66,23 +66,22 @@ export default defineConfig<Theme>({
         const selector = toEscapedSelector(rawSelector)
         const from = 'var(--un-dithered-from, var(--un-color-text))'
         const to = 'var(--un-dithered-to, var(--un-color-background))'
+        const textShadow = generateTextOutlineShadow(to, 2)
+        const dotSize = 5
+        const dotSizeRetina = 4
 
         return `
 ${selector} {
-  text-shadow:
-    -2px -2px 0 ${to}, 0 -2px 0 ${to},
-    2px -2px 0 ${to}, -2px 0 0 ${to},
-    2px 0 0 ${to}, -2px 2px 0 ${to},
-    0 2px 0 ${to}, 2px 2px 0 ${to};
+  text-shadow: ${textShadow};
   background-image: radial-gradient(${from} 20%, transparent 20%), radial-gradient(${from} 20%, transparent 20%);
-  background-position: 0px 0px, 2.5px 2.5px;
-  background-size: 5px 5px;
+  background-position: 0px 0px, ${dotSize / 2}px ${dotSize / 2}px;
+  background-size: ${dotSize}px ${dotSize}px;
 }
 
 @media (min-resolution: 2dppx) {
   ${selector} {
-    background-position: 0px 0px, 2px 2px;
-    background-size: 4px 4px;
+    background-position: 0px 0px, ${dotSizeRetina / 2}px ${dotSizeRetina / 2}px;
+    background-size: ${dotSizeRetina}px ${dotSizeRetina}px;
   }
 }
 `
@@ -95,3 +94,18 @@ ${selector} {
   presets: [presetWind4(), presetIcons()],
   transformers: [transformerDirectives()],
 })
+
+/**
+ * Generates a text-shadow that creates an outline effect around glyphs.
+ * Covers all positions in a box pattern up to the given radius.
+ */
+function generateTextOutlineShadow(color: string, radius = 2): string {
+  const shadows: string[] = []
+  for (let x = -radius; x <= radius; x++) {
+    for (let y = -radius; y <= radius; y++) {
+      if (x === 0 && y === 0) continue
+      shadows.push(`${x}px ${y}px 0 ${color}`)
+    }
+  }
+  return shadows.join(', ')
+}
