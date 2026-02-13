@@ -25,12 +25,19 @@ const ICONS: Record<string, string> = {
   'https://kirby': 'i-simple-icons:kirby',
 }
 
+const EXTENSION_ICONS: Record<string, string> = {
+  pdf: 'i-carbon:document-pdf',
+}
+
 const linksWithIcons = props.block.content.links.map((item) => {
   const hostname = Object.keys(ICONS).find((icon) => item.link.startsWith(icon))
+  const extension = item.link.split('.').pop()?.toLowerCase()
 
   return {
     ...item,
     ...(hostname && { icon: ICONS[hostname] }),
+    ...(extension &&
+      EXTENSION_ICONS[extension] && { icon: EXTENSION_ICONS[extension] }),
   }
 })
 </script>
