@@ -25,8 +25,8 @@ if (import.meta.server) {
     link: [
       {
         rel: 'icon',
-        href: '/favicon.ico',
-        sizes: '32x32',
+        href: '/icon.svg',
+        type: 'image/svg+xml',
       },
       {
         rel: 'apple-touch-icon',
