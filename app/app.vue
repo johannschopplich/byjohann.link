@@ -3,7 +3,7 @@ import '@unocss/reset/tailwind.css'
 import '~/assets/uno.css'
 import '~/assets/css/main.css'
 import '~/assets/css/prose.css'
-import '~/assets/css/prose.custom.css'
+import '~/assets/css/prose-overrides.css'
 
 if (import.meta.dev) {
   useNuxtApp().hooks.hook('vue:error', console.error)
