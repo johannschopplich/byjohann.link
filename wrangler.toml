@@ -3,13 +3,13 @@ main = "./.output/server/index.mjs"
 compatibility_date = "2025-08-01"
 compatibility_flags = ["nodejs_compat", "no_nodejs_compat_v2"]
 
-routes = [
-  { pattern = "byjohann.link", custom_domain = true }
-]
+[[routes]]
+pattern = "byjohann.link"
+custom_domain = true
 
-kv_namespaces = [
-  { binding = "KV_BINDING", id = "f52afe050756444b8c2ac005f10afcb9" }
-]
+[[kv_namespaces]]
+binding = "KV_BINDING"
+id = "f52afe050756444b8c2ac005f10afcb9"
 
 [assets]
 directory = "./.output/public"
