@@ -4,7 +4,6 @@ import {
   presetIcons,
   presetWind4,
   toEscapedSelector,
-  transformerDirectives,
 } from 'unocss'
 
 export default defineConfig<Theme>({
@@ -92,7 +91,6 @@ ${selector} {
     'max-w-content': 'mx-auto w-[min(100%-4rem,640px)]',
   },
   presets: [presetWind4(), presetIcons()],
-  transformers: [transformerDirectives()],
 })
 
 /**
