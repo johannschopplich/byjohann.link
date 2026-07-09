@@ -26,6 +26,9 @@ importers:
       '@types/node':
         specifier: ^26.1.0
         version: 26.1.1
+      '@unocss/cli':
+        specifier: ^66.7.5
+        version: 66.7.5
       '@unocss/eslint-config':
         specifier: ^66.7.4
         version: 66.7.5(eslint@10.6.0(jiti@2.7.0))(typescript@6.0.3)

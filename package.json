@@ -24,6 +24,7 @@
     "@nuxtjs/color-mode": "^4.0.1",
     "@sindresorhus/slugify": "^3.0.0",
     "@types/node": "^26.1.0",
+    "@unocss/cli": "^66.7.5",
     "@unocss/eslint-config": "^66.7.4",
     "@unocss/nuxt": "^66.7.4",
     "@unocss/preset-wind4": "^66.7.5",
