@@ -26,14 +26,18 @@
     "@types/node": "^26.1.0",
     "@unocss/eslint-config": "^66.7.4",
     "@unocss/nuxt": "^66.7.4",
+    "@unocss/preset-wind4": "^66.7.5",
     "@vueuse/nuxt": "^14.3.0",
     "culori": "^4.0.2",
     "eslint": "^10.6.0",
+    "kirby-types": "^1.5.0",
     "nuxt": "^4.4.8",
     "nuxt-kirby": "^3.0.3",
     "postcss-nesting": "^14.0.0",
     "prettier": "^3.9.4",
     "typescript": "^6.0.3",
+    "ufo": "^1.6.4",
+    "unocss": "^66.7.5",
     "vue-tsc": "^3.3.6"
   }
 }
