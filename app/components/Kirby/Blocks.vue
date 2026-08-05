@@ -22,7 +22,6 @@ const blockComponents: Record<string, Component> = {
   list: LazyKirbyBlockList,
   quote: LazyKirbyBlockQuote,
   text: LazyKirbyBlockText,
-  // Custom blocks
   'linktree-section': LazyKirbyBlockLinktreeSection,
 }
 

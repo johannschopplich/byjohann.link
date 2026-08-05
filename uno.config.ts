@@ -15,7 +15,7 @@ export default defineConfig<Theme>({
   },
   safelist: [
     'font-heading',
-    // Force stone color CSS variables to be generated
+    // Force stone color CSS variables to be generated.
     ...[50, 100, 200, 300, 400, 500, 600, 700, 800, 900, 950].map(
       (n) => `text-stone-${n}`,
     ),

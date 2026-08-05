@@ -4,7 +4,6 @@ export default defineComponent({
   setup(_, ctx) {
     if (!ctx.slots.default) return
 
-    // Renders the default slot.
     const renderSlot = () => {
       return ctx.slots.default!()
     }

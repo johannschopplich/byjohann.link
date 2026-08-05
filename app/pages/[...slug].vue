@@ -11,11 +11,10 @@ if (!data.value?.result) {
   if (event) setResponseStatus(event, 404)
 }
 
-// Store page data
 const page = data.value?.result
 setPage(page)
 
-// Wait for components that require page data to be loaded
+// Wait for components that require page data to be loaded.
 await renderPageDependencies()
 </script>
 

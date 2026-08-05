@@ -21,20 +21,20 @@ export default defineNuxtConfig({
   },
 
   features: {
-    // Force inlining _all_ CSS
+    // Force inlining _all_ CSS.
     inlineStyles: true,
   },
 
   hooks: {
     'build:manifest': (manifest) => {
       for (const item of Object.values(manifest)) {
-        // Disable prefetch links for dynamic imports
+        // Disable prefetch links for dynamic imports.
         item.dynamicImports = []
 
-        // Disable prefetch links for all items
+        // Disable prefetch links for all items.
         item.prefetch = false
 
-        // Remove render-blocking CSS
+        // Remove render-blocking CSS.
         if (item.resourceType === 'script') {
           item.css = []
         }
@@ -62,10 +62,10 @@ export default defineNuxtConfig({
 
   unocss: {
     // We manually build and inline the `uno.css` at build-time, because the
-    // UnoCSS Vite plugin doesn't get inlined by Nuxt
+    // UnoCSS Vite plugin doesn't get inlined by Nuxt.
     autoImport: isDev,
     preflight: isDev,
-    // UnoCSS disables the `inlineStyles` Nuxt feature by default (which we want to use)
+    // UnoCSS disables the `inlineStyles` Nuxt feature by default (which we want to use).
     disableNuxtInlineStyle: false,
   },
 

@@ -14,14 +14,12 @@ const props = defineProps<{
 }>()
 
 const ICONS: Record<string, string> = {
-  // Social
   'https://www.instagram.com': 'i-carbon:logo-instagram',
   'https://www.linkedin.com': 'i-carbon:logo-linkedin',
   'https://github.com': 'i-carbon:logo-github',
   'https://x.com': 'i-carbon:logo-x',
   'https://www.youtube.com': 'i-carbon:logo-youtube',
   'mailto:': 'i-carbon:email',
-  // Products
   'https://kirby': 'i-simple-icons:kirby',
 }
 
