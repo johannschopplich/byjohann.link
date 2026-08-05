@@ -22,11 +22,6 @@ export default defineComponent({
           resolve(renderSlot)
         }
 
-        // If Nuxt has an error, immediately render the component.
-        if (nuxtApp.payload.error || nuxtApp._pageDependenciesRendered) {
-          return resolver()
-        }
-
         // Called manually by using the `renderPageDependencies` composable.
         nuxtApp.hooks.hookOnce('page-dependencies:rendered', resolver)
 
