@@ -13,5 +13,5 @@ id = "f52afe050756444b8c2ac005f10afcb9"
 
 [assets]
 directory = "./.output/public"
-not_found_handling = "single-page-application"
+not_found_handling = "none"
 binding = "ASSETS"
