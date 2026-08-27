@@ -44,7 +44,7 @@ if (import.meta.server) {
 
 <template>
   <div
-    class="mx-4 border-x border-secondary/75 hidden inset-0 fixed z-[-1] lg:mx-8 sm:mx-6 sm:block"
+    class="mx-4 border-x border-primary/75 hidden inset-0 fixed z-[-1] lg:mx-8 sm:mx-6 sm:block"
   />
 
   <PageDependency>

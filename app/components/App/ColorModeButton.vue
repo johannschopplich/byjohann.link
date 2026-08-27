@@ -16,11 +16,11 @@ function toggleColorMode() {
   >
     <span
       aria-hidden="true"
-      class="i-carbon:sun size-[1.25em] group-hover:text-secondary dark:hidden"
+      class="i-carbon:sun size-[1.25em] group-hover:text-primary dark:hidden"
     />
     <span
       aria-hidden="true"
-      class="i-carbon:moon size-[1.5em] hidden group-hover:text-secondary dark:block"
+      class="i-carbon:moon size-[1.5em] hidden group-hover:text-primary dark:block"
     />
   </button>
 </template>

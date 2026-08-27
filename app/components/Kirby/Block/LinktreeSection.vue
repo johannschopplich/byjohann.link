@@ -48,7 +48,7 @@ const linksWithIcons = props.block.content.links.map((item) => {
     <div v-for="(item, index) in linksWithIcons" :key="index">
       <a
         :href="item.link"
-        class="py-1.5 decoration-[length:var(--un-decoration-thickness)] underline-offset-[var(--un-decoration-offset)] inline-flex w-full items-center justify-center relative halftone-bg -my-0.5 focus-visible:outline-2 focus-visible:outline-current focus-visible:outline-offset-2 focus-visible:outline hover:underline hover:decoration-secondary-500 active:translate-y-[1px] dark:[--un-dithered-from:var(--colors-stone-400)] hover:[--un-dithered-from:var(--un-color-secondary-600)] dark:hover:decoration-secondary-400 dark:hover:[--un-dithered-from:var(--un-color-secondary-400)]"
+        class="py-1.5 decoration-[length:var(--un-decoration-thickness)] underline-offset-[var(--un-decoration-offset)] inline-flex w-full items-center justify-center relative halftone-bg -my-0.5 focus-visible:outline-2 focus-visible:outline-current focus-visible:outline-offset-2 focus-visible:outline hover:underline hover:decoration-primary-500 active:translate-y-[1px] dark:[--un-dithered-from:var(--colors-stone-400)] hover:[--un-dithered-from:var(--un-color-primary-600)] dark:hover:decoration-primary-400 dark:hover:[--un-dithered-from:var(--un-color-primary-400)]"
       >
         <span
           v-if="item.icon"
