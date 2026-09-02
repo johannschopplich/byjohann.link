@@ -7,7 +7,7 @@ const page = usePage<KirbyLinktreeData>()
 <template>
   <header class="flex flex-col items-center">
     <div
-      class="h-22 w-full relative halftone-bg dark:[--un-dithered-from:var(--colors-stone-400)]"
+      class="halftone-bg h-22 w-full dark:[--un-halftone-color:var(--colors-stone-400)]"
     >
       <DevOnly>
         <AppColorModeButton
