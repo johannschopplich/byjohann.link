@@ -2,7 +2,7 @@
   "name": "byjohann-link",
   "type": "module",
   "private": true,
-  "packageManager": "pnpm@11.24.0",
+  "packageManager": "pnpm@12.16.1",
   "scripts": {
     "dev": "pnpm run uno:clean && nuxt dev",
     "build": "pnpm run uno:build && nuxt build",
