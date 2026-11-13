@@ -52,6 +52,13 @@ export default defineNuxtConfig({
 
   kirby: {
     auth: 'bearer',
+    // The site only sends KQL queries.
+    allowedRoutes: [
+      {
+        path: 'api/kql',
+        methods: ['POST'],
+      },
+    ],
     server: {
       cache: !isDev,
       storage: 'kql',
