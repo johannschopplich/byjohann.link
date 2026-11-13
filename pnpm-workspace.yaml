@@ -1,5 +1,5 @@
 minimumReleaseAgeExclude:
-  - kirby-types@1.8.1
+  - nuxt-kirby@5.0.0
 
 shellEmulator: true
 trustPolicy: no-downgrade
