@@ -24,17 +24,10 @@ const blockComponents: Record<string, Component> = {
   text: LazyKirbyBlockText,
   'linktree-section': LazyKirbyBlockLinktreeSection,
 }
-
-const content = useTemplateRef('content')
-useInternalLinks(content)
 </script>
 
 <template>
-  <div
-    ref="content"
-    class="prose text-center"
-    style="--un-prose-space-y: 0.5rem"
-  >
+  <div class="prose text-center" style="--un-prose-space-y: 0.5rem">
     <template v-for="(block, index) in blocks" :key="index">
       <component :is="blockComponents[block.type]" :block="block" />
     </template>

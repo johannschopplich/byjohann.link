@@ -40,6 +40,9 @@ if (import.meta.server) {
     ],
   })
 }
+
+const main = useTemplateRef('main')
+useInternalLinks(main)
 </script>
 
 <template>
@@ -51,7 +54,7 @@ if (import.meta.server) {
     <AppHeader class="mb-8" />
   </PageDependency>
 
-  <main id="main" class="max-w-content mb-16">
+  <main ref="main" id="main" class="max-w-content mb-16">
     <NuxtPage />
   </main>
 </template>
